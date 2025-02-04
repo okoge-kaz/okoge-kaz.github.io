@@ -18,22 +18,21 @@ export interface AboutMe {
 }
 
 export const aboutMe: AboutMe = {
-  name: "Jane R. Smith",
-  title: "Ph.D. Candidate",
-  institution: "Stanford University",
+  name: "Kazuki Fujii",
+  title: "Master's Student",
+  institution: "Institute of Science Tokyo",
   // Note that links work in the description
   description:
-    "I'm a final-year <a href='https://www.stanford.edu'>PhD candidate</a> working at the intersection of causal inference and machine learning. My research focuses on developing robust, interpretable systems that can reason about cause and effect in complex environments.",
-  email: "______@stanford.edu",
+    "I'm a first-year <a href='https://www.isct.ac.jp/en'>Master's student</a> working at the intersection of HPC and Machine Learning. My research focuses on distributed training of large models and low-precision training. Also, I am in charge of the maintenance of Pre-training Library for LLM and conducting experiments on training LLMs.",
+  email: "kazuki.fujii@rio.scrc.iir.isct.ac.jp",
   imageUrl:
-    "https://images.unsplash.com/photo-1581481615985-ba4775734a9b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  googleScholarUrl: "https://scholar.google.com/citations?user=bWtMl_MAAAAJ",
-  githubUsername: "janesmith",
-  linkedinUsername: "janesmith",
-  twitterUsername: "janesmith",
-  blogUrl: "https://",
-  cvUrl: "https://",
-  institutionUrl: "https://www.stanford.edu",
+    "",
+  githubUsername: "okoge-kaz",
+  linkedinUsername: "kazuki-fujii",
+  twitterUsername: "okoge_kaz",
+  blogUrl: "https://zenn.dev/kaz20",
+  cvUrl: "",
+  institutionUrl: "https://www.isct.ac.jp/en",
   // altName: "",
   // secretDescription: "I like dogs.",
 };
