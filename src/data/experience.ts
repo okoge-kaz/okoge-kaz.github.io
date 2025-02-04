@@ -10,21 +10,47 @@ export interface Experience {
 
 export const experienceData: Experience[] = [
   {
-    date: "Summer 2023",
+    date: "Apr 2024 - Present",
     title: "Research Intern",
-    company: "DeepMind",
+    company: "SB Intuitions",
     description:
-      "Developed novel algorithms for causal structure learning in reinforcement learning settings",
-    advisor: "Peter Wang",
-    companyUrl: "https://deepmind.com",
+      "Worked on developing frameworks on training large language models.",
+    manager: "Sho Takase",
+    companyUrl: "https://www.sbintuitions.co.jp/",
   },
   {
-    date: "Summer 2022",
+    date: "Feb 2023 - Present",
     title: "Research Intern",
-    company: "Google Research",
+    company: "Turing",
     description:
-      "Worked on improving robustness of large language models to distribution shifts",
-    manager: "Elise Brown",
-    companyUrl: "https://google.com",
+      "Worked on developing frameworks on training vision-language models and large language models.",
+    manager: "Yu Yamaguchi",
+    companyUrl: "https://tur.ing/en",
+  },
+  {
+    date: "Apr 2024 - Dec 2024",
+    title: "Intern",
+    company: "Sakana AI",
+    description:
+      "Worked on deploying and maintaining H100 cluster for research and development of large language models.",
+    manager: "Takuya Akiba",
+    companyUrl: "https://sakana.ai/",
+  },
+  {
+    date: "Oct 2023 - Feb 2024",
+    title: "Research Intern",
+    company: "Kotoba Technologies",
+    description:
+      "Worked on developing LLM training library and working on training large language models. I developed Mamba training library on Dec 2023 when huggingface didn't support mamba training at that time.",
+    manager: "Noriyuki Kojima",
+    companyUrl: "https://www.kotoba.tech/en/home",
+  },
+  {
+    date: "Summer 2023",
+    title: "Intern",
+    company: "Preferred Networks, Inc.",
+    description:
+      "Developed ImageRecognition System for Real-world Applications",
+    companyUrl: "https://www.preferred.jp/en/",
   },
 ];
