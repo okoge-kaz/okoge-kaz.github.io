@@ -23,7 +23,7 @@ export const aboutMe: AboutMe = {
   institution: "Institute of Science Tokyo",
   // Note that links work in the description
   description:
-    "I'm a first-year <a href='https://www.isct.ac.jp/en'>Master's student</a> working at the intersection of HPC and Machine Learning. My research focuses on distributed training of large models and low-precision training. Also, I am in charge of the maintenance of Pre-training Library for LLM and conducting experiments on training LLMs.",
+    "I'm a first-year <a href='https://www.isct.ac.jp/en'>Master's student</a> working at the intersection of HPC and Machine Learning. My research focuses on distributed training of large models and low-precision training. Also, I am in charge of the maintenance of Pre-training Library for LLM and conducting experiments on training LLMs.\n\nI am a core contributor of <a href='https://swallow-llm.github.io/index.en.html'>Swallow Project</a> which is a Japanese LLM development initiative.\n\nI am currently looking for research internships in the field of HPC and Machine Learning.",
   email: "kazuki.fujii@rio.scrc.iir.isct.ac.jp",
   imageUrl:
     "",
