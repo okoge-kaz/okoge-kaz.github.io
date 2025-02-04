@@ -27,6 +27,7 @@ export const aboutMe: AboutMe = {
   email: "kazuki.fujii@rio.scrc.iir.isct.ac.jp",
   imageUrl:
     "",
+  googleScholarUrl: "https://scholar.google.co.jp/citations?user=jHXLs2wAAAAJ",
   githubUsername: "okoge-kaz",
   linkedinUsername: "kazuki-fujii",
   twitterUsername: "okoge_kaz",
