@@ -21,7 +21,7 @@ export const portfolioData: Portfolio[] = [
   {
     title: "moe-recipes: Mixture of Experts LLM training Framework",
     description:
-      "A framework for training MoE with DeepSpeed.",
+      "As of January 2024, the range of MoE models supported by Megatron-LM was limited, and the version of Megatron-LM relied upon by megablockss was outdated. Consequently, to enable continual pre-training of Mixtral, it was necessary to develop a custom library. I independently created moe-recipes, a library built on DeepSpeed as the backend, which supported the development of tokyotech-llm/Swallow-MX-8x7b-NVE-v0.1. This library has also been utilized in experiments for the ICLR 2025 paper, 'Drop-Upcycling: Training Sparse Mixture of Experts with Partial Re-initialization.'",
     technologies: ["Python", "PyTorch"],
     imageUrl:
       "",
