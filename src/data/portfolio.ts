@@ -36,4 +36,13 @@ export const portfolioData: Portfolio[] = [
       "",
     codeUrl: "https://github.com/okoge-kaz/llm-recipes",
   },
+  {
+    title: "kotomamba: State Space Model training Framework",
+    description:
+      "As of December 2023, even popular libraries like Hugging Face Transformers did not support Mamba. To enable both from-scratch training and continual pre-training for Mamba models, I independently developed kotomamba—a distributed training library built on PyTorch FSDP.",
+    technologies: ["Python", "PyTorch"],
+    imageUrl:
+      "",
+    codeUrl: "https://github.com/kotoba-tech/kotomamba",
+  }
 ];
