@@ -30,7 +30,7 @@ export const portfolioData: Portfolio[] = [
   {
     title: "llm-recipes: LLM continual pre-training & post-training Framework",
     description:
-      "A framework for training LLM with PyTorch FSDP for every huggingface dense LLMs.",
+      "As of January 2024, since [Megatron-LM](https://github.com/NVIDIA/Megatron-LM) did not support training [Mistral](https://huggingface.co/mistralai/Mistral-7B-v0.1) models, I built upon Meta’s llama-recipes (now known as [llama-cookbook](https://github.com/meta-llama/llama-cookbook)) to develop a library that enables the training of non-Llama models. I modified the DataLoader to handle training at a 100B-token scale, integrated [wandb](https://wandb.ai/site/) logging, and implemented additional essential training features such as learning rate scheduling. The resulting library, llm-recipes, supports continual pre-training, supervised fine-tuning (SFT), and DPO. This work was submitted to the [SC24 TPC workshop](https://tpc.dev/tpc-workshop-at-sc24/) and accepted.",
     technologies: ["Python", "PyTorch"],
     imageUrl:
       "",
