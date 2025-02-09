@@ -12,7 +12,7 @@ export const portfolioData: Portfolio[] = [
   {
     title: "vlm-recipes: VLM training Framework",
     description:
-      "A framework for training vision-language models with PyTorch FSDP.",
+      "A framework for training vision-language models with PyTorch FSDP. As of May 2024, since Megatron-LM did not support training Vision Language Models (VLMs), I independently extended llm-recipes to enable Visual Instruction Tuning, resulting in the development of vlm-recipes. Development was subsequently halted once Megatron-LM began supporting training for LLaVA.",
     technologies: ["Python", "PyTorch"],
     imageUrl:
       "",
