@@ -19,6 +19,15 @@ export const experienceData: Experience[] = [
     companyUrl: "https://www.sbintuitions.co.jp/",
   },
   {
+    date: "Oct 2023 - Present",
+    title: "Research Intern",
+    company: "AIST (National Institute of Advanced Industrial Science and Technology)",
+    description:
+      "I am involved in selecting and maintaining pre-training and post-training libraries, managing experiments, and setting up experimental environments to develop a Japanese LLM with competitive performance. This initiative, known as the Swallow Project (https://swallow-llm.github.io/index.en.html), has contributed to the development of non-English LLMs by achieving top performance among open Japanese models as of December 2023. As a core contributor to the project, I have been broadly involved in all aspects of the training process—from procuring computational resources and maintaining the Environment Module to creating synthetic data.",
+    manager: "Hiroya Takamura",
+    companyUrl: "https://www.airc.aist.go.jp/en/",
+  },
+  {
     date: "Feb 2023 - Present",
     title: "Research Intern",
     company: "Turing",
