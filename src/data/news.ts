@@ -14,17 +14,24 @@ export const newsData: News[] = [
     link: "https://icml.cc/",
   }*/
   {
+    date: "Nov 2024",
+    title: "NVIDIA AI Summit 2024 Tokyo Talk",
+    description:
+      "I gave a talk at NVIDIA AI Summit 2024 Tokyo on the topic of 'How to train LLM efficiently with Megatron-LM and TransformerEngine'.",
+    link: "https://www.nvidia.com/ja-jp/events/ai-summit/",
+  },
+  {
     date: "August 2024",
     title: "Google Cloud Next '24 Tokyo Talk",
     description:
       "I gave a talk at Google Cloud Next '24 Tokyo on the topic of 'How to use Google Cluster Toolkit and real use-case'.",
-    link: "https://cloudonair.withgoogle.com/events/next-tokyo-24?talk=d2-inf-03"
+    link: "https://cloudonair.withgoogle.com/events/next-tokyo-24?talk=d2-inf-03",
   },
   {
     date: "March 2024",
     title: "NLP 2024 workshop talk",
     description:
       "I gave a talk at the NLP 2024 workshop on the topic of 'Distributed Training Technologies for Natural Language Processing'.",
-    link: "https://sites.google.com/view/llm-discussion-nlp2024-ws"
+    link: "https://sites.google.com/view/llm-discussion-nlp2024-ws",
   },
 ];
