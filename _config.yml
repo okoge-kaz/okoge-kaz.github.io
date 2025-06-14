@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Your Name / Site Title"
+title                    : "Kazuki Fujii"
 title_separator          : "-"
 name                     : &name "Kazuki Fujii"
 description              : &description "personal description"
