@@ -15,7 +15,7 @@ name                     : &name "Kazuki Fujii"
 description              : &description "personal description"
 url                      : https://okoge-kaz.github.io/ # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "okoge-kaz/okoge-kaz.github.io"
+repository               : "okoge-kaz.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -25,7 +25,7 @@ author:
   avatar           : "profile.png"
   name             : "Kazuki Fujii"
   pronouns         : "he/him"
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "Research Engineer at Preferred Networks, Inc. and master student at Institute of Science Tokyo. My research focuses on distributed training of large models and low-precision training. Also, I am in charge of the maintenance of Pre-training Library for LLMs and conducting experiments on training LLMs."
   location         : "Tokyo, Japan"
   employer         : "Institute of Science Tokyo"
   uri              : # URL
