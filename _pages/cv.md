@@ -17,7 +17,7 @@ Education
 Work experience
 ======
 * Jun 2025 - Present: Research Engineer Intern
-  * Preferred Networks, Inc., Tokyo, Japan
+  * [Preferred Networks, Inc.](https://www.preferred.jp/en/), Tokyo, Japan
   * Duties included: Research and development of LLM pre-training
   * Supervisor: Hiroaki Mikami, Shuji Suzuki
 
