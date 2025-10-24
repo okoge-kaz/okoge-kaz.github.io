@@ -1,5 +1,5 @@
 baseURL: "https://pascalmichaillat.org/hugo-website/" 
-title: Moritz-Maria von Igelfeld
+title: Kazuki Fujii
 theme: PaperMod
 
 enableInlineShortcodes: true
@@ -25,12 +25,12 @@ menu:
           url: data/
           weight: 4 
         - name: Blog
-          url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
+          url: https://zenn.dev/kaz20
           weight: 6
 
 params:
-    description: "This website hosts Moritz-Maria von Igelfeld's research papers, books, course materials, data, curriculum vitae, and contact information."
-    author: Moritz-Maria von Igelfeld
+    description: "This website hosts Kazuki Fujii's research papers, books, course materials, data, curriculum vitae, and contact information."
+    author: Kazuki Fujii
     # googleAnalyticsID: "G-XXXXX"
     DateFormat: "January 2006"
     defaultTheme: light
@@ -54,9 +54,9 @@ params:
     math: true
     profileMode:
           enabled: true
-          title: Professor Dr von Igelfeld
-          subtitle: "I am a Professor in the Institute of Romance Philology at the University of Regensburg, Germany. My research focuses on Portuguese irregular verbs. I was a doctoral student of Professor Dr Dieter Vogelsang in Munich, and later a second assistant of Professor Walter Schoeffler-Henschell at the University of Wiesbaden."
-          imageUrl: "picture.jpeg"
+          title: Kazuki Fujii
+          subtitle: "Kazuki Fujii is a Master's student at the Institute of Science Tokyo, leading the Swallow Project, an open bilingual LLM initiative for Japanese and English. His work focuses on large-scale pre-training, distributed training, FP8 mixed-precision with Megatron-LM and TransformerEngine, and improving the quality of code and math datasets for reasoning LLMs."
+          imageUrl: "picture.png"
           imageWidth: 160
           imageHeight: 160
           buttons:
@@ -73,31 +73,21 @@ params:
             - name: Archive
               url: archive/
             - name: Blog
-              url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
+              url: https://zenn.dev/kaz20
 
     socialIcons:
         - name: CV
           url: cv.pdf
         - name: Email
-          url: mailto:igelfeld@regensburg.edu
-        - name: Zoom
-          url: https://www.zoom.us/my/igelfeld
-        - name: Location
-          url: location/
-        - name: Office Hours
-          url: officehours/
+          url: kazuki.fujii@rio.scrc.iir.isct.ac.jp
         - name: Google Scholar
-          url: https://scholar.google.com/citations?user=cL23w-4AAAAJ
+          url: https://scholar.google.co.jp/citations?user=jHXLs2wAAAAJ&hl=en
         - name: GitHub
-          url: https://github.com/pmichaillat
-        - name: Substack
-          url: https://pmichaillat.substack.com
-        - name: YouTube
-          url: https://www.youtube.com/@pmichaillat
+          url: https://github.com/okoge-kaz
         - name: Twitter
-          url: https://x.com/pmichaillat
+          url: https://x.com/okoge_kaz
         - name: Bluesky
-          url: https://bsky.app/profile/pmichaillat.bsky.social
+          url: https://bsky.app/profile/kazukifujii.bsky.social
 
     assets:
         disableScrollBarStyle: true
@@ -105,7 +95,7 @@ params:
         hiddenInList: false
         hiddenInSingle: true
     label:
-      text: "Moritz-Maria von Igelfeld"
+      text: "Kazuki Fujii"
       icon: favicon.ico
       iconHeight: 18
 
