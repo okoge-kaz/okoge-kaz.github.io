@@ -14,18 +14,15 @@ menu:
     main:
         - name: Books
           url: books/
-          weight: 5 
-        - name: Papers
-          url: papers/
+          weight: 5
+        - name: Projects
+          url: projects/
           weight: 2
-        - name: Courses
-          url: courses/
-          weight: 3
-        - name: Data
-          url: data/
-          weight: 4 
+        - name: Work in Progress
+          url: wp/
+          weight: 4
         - name: Blog
-          url: https://zenn.dev/kaz20
+          url: blog/
           weight: 6
 
 params:
@@ -60,24 +57,22 @@ params:
           imageWidth: 160
           imageHeight: 160
           buttons:
-            - name: Papers
-              url: papers/
-            - name: Data
-              url: data/
+            - name: Projects
+              url: projects/
+            - name: Work in Progress
+              url: wp/
             - name: Books
               url: books/
-            - name: Courses
-              url: courses/
-            - name: Tags
-              url: tags/
-            - name: Archive
-              url: archive/
             - name: Blog
-              url: https://zenn.dev/kaz20
+              url: blog/
+            - name: CV
+              url: cv.pdf
 
     socialIcons:
         - name: CV
           url: cv.pdf
+        - name: LinkedIn
+          url: https://www.linkedin.com/in/kazuki-fujii/
         - name: Email
           url: kazuki.fujii@rio.scrc.iir.isct.ac.jp
         - name: Google Scholar
