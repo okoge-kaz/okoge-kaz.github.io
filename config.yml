@@ -63,10 +63,12 @@ params:
               url: wp/
             - name: Books
               url: books/
-            - name: Blog
-              url: blog/
             - name: CV
               url: cv.pdf
+            - name: Blog
+              url: blog/
+            - name: Blog(Japanese)
+              url: https://zenn.dev/kaz20
 
     socialIcons:
         - name: CV
