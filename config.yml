@@ -12,9 +12,6 @@ taxonomies:
 
 menu:
     main:
-        - name: Projects
-          url: projects/
-          weight: 2
         - name: Publications
           url: publications/
           weight: 6
@@ -54,8 +51,6 @@ params:
           imageWidth: 160
           imageHeight: 160
           buttons:
-            - name: Projects
-              url: projects/
             - name: CV
               url: cv.pdf
             - name: Publications

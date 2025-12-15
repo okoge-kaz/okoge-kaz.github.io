@@ -1,9 +1,50 @@
 # Publications
 
-Google Scholar: https://scholar.google.co.jp/citations?user=jHXLs2wAAAAJ&hl=en
-
+<a href="https://scholar.google.co.jp/citations?user=jHXLs2wAAAAJ&hl=en"><img src="https://img.shields.io/badge/Google_Scholar-Kazuki_Fujii-4285F4?logo=google-scholar&style=flat-square" alt="Google Scholar"></a>
 
 ## Peer-Reviewed Conference Papers
+
+### **Building Instruction-Tuning Datasets from Human-Written Instructions with Open-Weight Large Language Models**
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -20px;">
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-Co--Author-777777?style=flat-square" alt="Co-Author"></span>
+  <a href="https://arxiv.org/abs/2503.23714"><img src="https://img.shields.io/badge/arXiv-2503.23714-b31b1b.svg?style=flat-square" alt="arXiv"></a>
+  <a href="https://colmweb.org/"><img src="https://img.shields.io/badge/COLM_2025-Main_Conference-4b44ce?style=flat-square" alt="COLM 2025"></a>
+</div>
+
+* **Authors:** Youmi Ma, Sakae Mizuki, **Kazuki Fujii**, Taishi Nakamura, Masanari Ohi, Hinari Shimada, Taihei Shiotani, Koshiro Saito, Koki Maeda, Kakeru Hattori, Takumi Okamoto, Shigeki Ishida, Rio Yokota, Hiroya Takamura, Naoaki Okazaki
+* **Venue:** Conference on Language Modeling (COLM), 2025
+
+### **Drop-Upcycling: Training Sparse Mixture of Experts with Partial Re-initialization**
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -20px;">
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-Co--Author-777777?style=flat-square" alt="Co-Author"></span>
+  <a href="https://arxiv.org/abs/2502.19261"><img src="https://img.shields.io/badge/arXiv-2502.19261-b31b1b.svg?style=flat-square" alt="arXiv"></a>
+  <a href="https://iclr.cc/"><img src="https://img.shields.io/badge/ICLR_2025-Main_Conference-ede1d1?style=flat-square" alt="ICLR 2025"></a>
+</div>
+
+* **Authors:** Taishi Nakamura, Takuya Akiba, **Kazuki Fujii**, Yusuke Oda, Rio Yokota, Jun Suzuki
+* **Venue:** International Conference on Learning Representations (ICLR), 2025
+
+### **Continual Pre-Training for Cross-Lingual LLM Adaptation: Enhancing Japanese Language Capabilities**
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -20px;">
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-First_Author-007ec6?style=flat-square" alt="First Author"></span>
+  <a href="https://arxiv.org/abs/2404.17790"><img src="https://img.shields.io/badge/arXiv-2404.17790-b31b1b.svg?style=flat-square" alt="arXiv"></a>
+  <a href="https://colmweb.org/"><img src="https://img.shields.io/badge/COLM_2024-Main_Conference-4b44ce?style=flat-square" alt="COLM 2024"></a>
+  <a href="https://huggingface.co/collections/tokyotech-llm/swallow"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-ffd21e?style=flat-square" alt="Hugging Face"></a>
+  <a href="https://github.com/rioyokotalab/Megatron-Llama2"><img src="https://img.shields.io/badge/Code-GitHub-181717?logo=github&style=flat-square" alt="Code"></a>
+</div>
+
+* **Authors:** **Kazuki Fujii**, Taishi Nakamura, Mengsay Loem, Hiroki Iida, Masanari Ohi, Kakeru Hattori, Hirai Shota, Sakae Mizuki, Rio Yokota, Naoaki Okazaki
+* **Venue:** Conference on Language Modeling (COLM), 2024
+
+### **Building a Large Japanese Web Corpus for Large Language Models**
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -20px;">
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-Co--Author-777777?style=flat-square" alt="Co-Author"></span>
+  <a href="https://arxiv.org/abs/2404.17733"><img src="https://img.shields.io/badge/arXiv-2404.17733-b31b1b.svg?style=flat-square" alt="arXiv"></a>
+  <a href="https://colmweb.org/"><img src="https://img.shields.io/badge/COLM_2024-Main_Conference-4b44ce?style=flat-square" alt="COLM 2024"></a>
+</div>
+
+* **Authors:** Naoaki Okazaki, Kakeru Hattori, Hirai Shota, Hiroki Iida, Masanari Ohi, **Kazuki Fujii**, Taishi Nakamura, Mengsay Loem, Rio Yokota, Sakae Mizuki
+* **Venue:** Conference on Language Modeling (COLM), 2024
 
 ---
 ## Workshop Papers
