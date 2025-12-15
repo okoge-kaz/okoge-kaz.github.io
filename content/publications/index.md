@@ -139,7 +139,7 @@
 ---2025---
 
 ### **合成データパイプラインを利用したSwallow ProjectにおけるLLM性能向上**
-<div style="color: #666; font-size: 0.9em; margin-top: -15px;">(Improving LLM Performance in the Swallow Project using Synthetic Data Pipelines)</div>
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -15px;">(Improving LLM Performance in the Swallow Project using Synthetic Data Pipelines)</div>
 <div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -5px;">
   <span style="display: inline-block;"><img src="https://img.shields.io/badge/Date-2025%2F09%2F04-777777?style=flat-square" alt="Date"></span>
   <span style="display: inline-block;"><img src="https://img.shields.io/badge/Language-Japanese-d7003a?style=flat-square" alt="Japanese"></span>
@@ -222,7 +222,7 @@
 </div>
 
 * **Event:** Google Cloud Next '24 Tokyo
-* **Topic:** GENIAC 2024 H100 (A3) Cluster with Cluster Toolkit
+* **Topic:** GENIAC 2024, H100 (A3) Cluster with Cluster Toolkit
 
 ### **大規模言語モデルの分散並列学習**
 <div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -15px;">
@@ -249,9 +249,9 @@
 
 * **Event:** NLP2024 Workshop (Invited Talk)
 
-### **大規模言語モデルLLMの事前学習知見**
+### **大規模言語モデルの事前学習知見**
 <div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -15px;">
-(Pre-Training Insights of Large Language Models LLMs)</div>
+(Pre-Training Insights of Large Language Models)</div>
 <div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -5px;">
   <span style="display: inline-block;"><img src="https://img.shields.io/badge/Date-2024%2F02-777777?style=flat-square" alt="Date"></span>
   <span style="display: inline-block;"><img src="https://img.shields.io/badge/Language-Japanese-d7003a?style=flat-square" alt="Japanese"></span>
