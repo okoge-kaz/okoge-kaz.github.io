@@ -132,56 +132,136 @@
 * **Authors:** 服部 翔, 水木 栄, **藤井 一喜(Kazuki Fujii)**, 中村 泰士, (他)
 * **Venue:** 言語処理学会第31回年次大会 (NLP2025)
 
+---
+
 ## Talks
 
-### AWS Summit Japan 2025
+---2025---
 
-**Title:** Amazon SageMaker HyperPod を利用した日本語 LLM (Swallow) の構築（CUS-02）
-Youtube: https://www.youtube.com/watch?v=HnsnWjEQ6Jo&list=PLzWGOASvSx6GlBQPNhLRBDLqKgYHJHOml&index=108
-Slides: https://speakerdeck.com/fujiikazuki2000/aws-summit-japan-2025-amazon-sagemaker-hyperpodwoli-yong-sitari-ben-yu-llm-swallow-nogou-zhu-cus-02
-Japanese Talk
+### **合成データパイプラインを利用したSwallow ProjectにおけるLLM性能向上**
+<div style="color: #666; font-size: 0.9em; margin-top: -15px;">(Improving LLM Performance in the Swallow Project using Synthetic Data Pipelines)</div>
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -5px;">
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Date-2025%2F09%2F04-777777?style=flat-square" alt="Date"></span>
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Language-Japanese-d7003a?style=flat-square" alt="Japanese"></span>
+  <a href="https://speakerdeck.com/fujiikazuki2000/he-cheng-detapaipurainwoli-yong-sitaswallowprojectni-okerullmxing-neng-xiang-shang"><img src="https://img.shields.io/badge/Slides-SpeakerDeck-E4405F?logo=speakerdeck&style=flat-square" alt="Slides"></a>
+  <a href="https://aws.amazon.com/jp/blogs/news/4th-gen-ai-frontier-meet-up/"><img src="https://img.shields.io/badge/Event-AWS_AI_Frontier-232f3e?logo=amazon-aws&style=flat-square" alt="Event"></a>
+</div>
+
+* **Event:** AWS AI Frontier Meetup 2025
+
+### **論文では語られないLLM開発において重要なこと ― Swallow Projectを通して**
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -15px;">
+(Important Aspects of LLM Development Untold in Papers: Through the Swallow Project)</div>
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -5px;">
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Date-2025%2F07%2F16-777777?style=flat-square" alt="Date"></span>
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Language-Japanese-d7003a?style=flat-square" alt="Japanese"></span>
+  <a href="https://youtu.be/qAlj8EtCiuI?si=S09WJMiEGZlw6yY3"><img src="https://img.shields.io/badge/Video-YouTube-FF0000?logo=youtube&style=flat-square" alt="Video"></a>
+  <a href="https://speakerdeck.com/fujiikazuki2000/lun-wen-dehayu-rarenaillmkai-fa-nioitezhong-yao-nakoto-swallow-projectwotong-site"><img src="https://img.shields.io/badge/Slides-SpeakerDeck-E4405F?logo=speakerdeck&style=flat-square" alt="Slides"></a>
+  <a href="https://nlp-colloquium-jp.github.io/schedule/2025-07-16_kazuki-fujii/"><img src="https://img.shields.io/badge/Event-NLP_Colloquium-004513?style=flat-square" alt="Event"></a>
+</div>
+
+* **Event:** NLP Colloquium (第81回 NLPコロキウム)
+
+### **IHPCSS 2025 Lisbon**
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -15px;">
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Date-Summer_2025-777777?style=flat-square" alt="Date"></span>
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Language-English-005696?style=flat-square" alt="English"></span>
+  <a href="https://speakerdeck.com/fujiikazuki2000/ihpcss2025-kazuki-fujii"><img src="https://img.shields.io/badge/Slides-SpeakerDeck-E4405F?logo=speakerdeck&style=flat-square" alt="Slides"></a>
+  <a href="https://ss25.ihpcss.org/"><img src="https://img.shields.io/badge/Event-IHPCSS_2025-000000?style=flat-square" alt="Event"></a>
+</div>
+
+* **Event:** International High Performance Computing Summer School (IHPCSS 2025) in Lisbon
+
+### **Amazon SageMaker HyperPod を利用した日本語 LLM (Swallow) の構築**
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -15px;">
+(Building the Japanese LLM "Swallow" using Amazon SageMaker HyperPod)*</div>
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -5px;">
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Date-2025%2F06%2F25-777777?style=flat-square" alt="Date"></span>
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Language-Japanese-d7003a?style=flat-square" alt="Japanese"></span>
+  <a href="https://www.youtube.com/watch?v=HnsnWjEQ6Jo&list=PLzWGOASvSx6GlBQPNhLRBDLqKgYHJHOml&index=108"><img src="https://img.shields.io/badge/Video-YouTube-FF0000?logo=youtube&style=flat-square" alt="Video"></a>
+  <a href="https://speakerdeck.com/fujiikazuki2000/aws-summit-japan-2025-amazon-sagemaker-hyperpodwoli-yong-sitari-ben-yu-llm-swallow-nogou-zhu-cus-02"><img src="https://img.shields.io/badge/Slides-SpeakerDeck-E4405F?logo=speakerdeck&style=flat-square" alt="Slides"></a>
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Event-AWS_Summit_Japan-232f3e?logo=amazon-aws&style=flat-square" alt="Event"></span>
+</div>
+
+* **Event:** AWS Summit Japan 2025 (Session CUS-02)
 
 
+---
+--- 2024 ---
 
-### Google Cloud Next '24 Tokyo
+### **Continual Pre-Training on TSUBAME for a Target Language**
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -15px;">
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Date-2024%2F11%2F21-777777?style=flat-square" alt="Date"></span>
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Language-English-005696?style=flat-square" alt="English"></span>
+  <a href="https://www.t4.cii.isct.ac.jp/sc24/booth_talks"><img src="https://img.shields.io/badge/Event-SC24_Booth_Talk-005696?style=flat-square" alt="Event"></a>
+</div>
 
+* **Event:** SC24 (The International Conference for High Performance Computing) Tokyo Tech Booth
+* **Summary:** Introduced methodology for continual pre-training of Llama-3 (8B/70B) on TSUBAME supercomputer, focusing on efficient adaptation strategies.
 
-### DDN
+### **大規模モデルの学習知見**
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -15px;">
+(Insights on Training Large-Scale Models)</div>
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -5px;">
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Date-2024%2F11%2F13-777777?style=flat-square" alt="Date"></span>
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Language-Japanese-d7003a?style=flat-square" alt="Japanese"></span>
+  <a href="https://www.nvidia.com/ja-jp/on-demand/session/aisummitjp24-sjp1035/?playlistId=playList-d8df4c0f-4cfe-4a9b-9a7d-e6c2c4cc5fe1"><img src="https://img.shields.io/badge/Video-NVIDIA_On--Demand-76b900?logo=nvidia&style=flat-square" alt="Video"></a>
+  <a href="https://speakerdeck.com/fujiikazuki2000/da-gui-mo-yan-yu-moderunoxue-xi-zhi-jian"><img src="https://img.shields.io/badge/Slides-SpeakerDeck-E4405F?logo=speakerdeck&style=flat-square" alt="Slides"></a>
+</div>
 
-### NLPコロキウム
+* **Event:** NVIDIA AI Summit Japan 2024 <div><img src="https://img.shields.io/badge/Event-NVIDIA_AI_Summit-76b900?logo=nvidia&style=flat-square" alt="Event"></div>
 
+### **Google Cloud の AI Hypercomputer で学習を加速させる**
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -15px;">
+(Accelerating Training with Google Cloud AI Hypercomputer)</div>
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -5px;">
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Date-2024-777777?style=flat-square" alt="Date"></span>
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Language-Japanese-d7003a?style=flat-square" alt="Japanese"></span>
+  <a href="https://youtu.be/WegKjQu-Qqs?si=VWUUf3ddXMjMJMg_"><img src="https://img.shields.io/badge/Video-YouTube-FF0000?logo=youtube&style=flat-square" alt="Video"></a>
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Event-Google_Cloud_Next_'24-4285F4?logo=google-cloud&style=flat-square" alt="Event"></span>
+</div>
 
-### Tokyo Institute of Technology
+* **Event:** Google Cloud Next '24 Tokyo
+* **Topic:** GENIAC 2024 H100 (A3) Cluster with Cluster Toolkit
 
+### **大規模言語モデルの分散並列学習**
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -15px;">
+(Distributed Parallel Training of Large Language Models)</div>
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -5px;">
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Date-2024%2F05%2F29-777777?style=flat-square" alt="Date"></span>
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Language-Japanese-d7003a?style=flat-square" alt="Japanese"></span>
+  <a href="https://c5dc59ed978213830355fc8978.doorkeeper.jp/events/173472"><img src="https://img.shields.io/badge/Event-RIKEN_AIP-005696?style=flat-square" alt="Event"></a>
+</div>
 
-### RIKEN AIP
+* **Event:** RIKEN AIP (理研AIP) Seminar
+* **Summary:** Explained technical aspects of Data, Tensor, and Pipeline parallelism (3D Parallelism) for efficient LLM training, including real-world project examples.
 
+### **自然言語処理のための分散並列学習**
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -15px;">
+(Distributed Parallel Training for Natural Language Processing)</div>
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -5px;">
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Date-2024%2F03-777777?style=flat-square" alt="Date"></span>
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-Invited_Talk-FFD700?style=flat-square" alt="Invited"></span>
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Language-Japanese-d7003a?style=flat-square" alt="Japanese"></span>
+  <a href="https://speakerdeck.com/fujiikazuki2000/zi-ran-yan-yu-chu-li-notamenofen-san-bing-lie-xue-xi-3dd9cdf8-cc6d-4350-8141-89ce35b9d273"><img src="https://img.shields.io/badge/Slides-SpeakerDeck-E4405F?logo=speakerdeck&style=flat-square" alt="Slides"></a>
+  <a href="https://sites.google.com/view/llm-discussion-nlp2024-ws"><img src="https://img.shields.io/badge/Event-NLP2024_WS-004513?style=flat-square" alt="Event"></a>
+</div>
 
+* **Event:** NLP2024 Workshop (Invited Talk)
 
-### NLP2024 Invited Talk
+### **大規模言語モデルLLMの事前学習知見**
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -15px;">
+(Pre-Training Insights of Large Language Models LLMs)</div>
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -5px;">
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Date-2024%2F02-777777?style=flat-square" alt="Date"></span>
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Language-Japanese-d7003a?style=flat-square" alt="Japanese"></span>
+  <a href="https://speakerdeck.com/fujiikazuki2000/2024-02-tokyo-tech-da-gui-mo-yan-yu-moderunoshi-qian-xue-xi-zhi-jian"><img src="https://img.shields.io/badge/Slides-SpeakerDeck-E4405F?logo=speakerdeck&style=flat-square" alt="Slides"></a>
+  <a href="https://dsai.c.titech.ac.jp/dsai%E3%82%B7%E3%83%B3%E3%83%9D%E3%82%B8%E3%82%A6%E3%83%A02023%E9%96%8B%E5%82%AC%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/"><img src="https://img.shields.io/badge/Event-DSAI_Symposium-005696?style=flat-square" alt="Event"></a>
+</div>
 
-https://sites.google.com/view/llm-discussion-nlp2024-ws
+* **Event:** DSAI Symposium 2023 (Tokyo Tech)
 
-15:40 - 16:20 藤井一喜（東工大、Kotoba Technologies, Inc.）自然言語処理のための分散並列学習
-
-https://speakerdeck.com/fujiikazuki2000/zi-ran-yan-yu-chu-li-notamenofen-san-bing-lie-xue-xi-3dd9cdf8-cc6d-4350-8141-89ce35b9d273
-
-Japanese Talk
-
-### SC Tokyo Tech Booth 2024
-
-Continual Pre-Training on TSUBAME for a Target Language
-
-Thursday, 21 November 2024
-1:00 PM - 1:30 PM
-Continual Pre-Training on TSUBAME for a Target Language.
-Kazuki Fujii and Taishi Nakamura, Institute of Science Tokyo
-
-This booth talk introduces a methodology for continual pre-training Llama-3 specializing in target languages while maintaining English proficiency. We present technical aspects of training configurations for 8B and 70B models, focusing on efficient adaptation strategies that preserve the model's original capabilities. We will also show practical considerations and technical tips for successfully training these large-scale models.
-
-https://www.t4.cii.isct.ac.jp/sc24/booth_talks
-
-English Talk
+---
 
 ## Books
 
@@ -200,6 +280,8 @@ I contributed as a technical author focusing on the scalability infrastructure f
 
 * **Core Topics:** Data Parallelism, DeepSpeed ZeRo, Pipeline Parallelism (PP), Tensor Parallelism (TP), and 3D Parallelism.
 * **Impact:** Highly rated on Amazon Japan, serving as a definitive technical resource for LLM engineers in Japan.
+
+---
 
 ## Technical Blogs
 
