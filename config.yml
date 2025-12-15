@@ -12,14 +12,11 @@ taxonomies:
 
 menu:
     main:
-        - name: Books
-          url: books/
-          weight: 5
         - name: Projects
           url: projects/
           weight: 2
-        - name: Blog
-          url: blog/
+        - name: Publications
+          url: publications/
           weight: 6
 
 params:
@@ -59,12 +56,10 @@ params:
           buttons:
             - name: Projects
               url: projects/
-            - name: Books
-              url: books/
             - name: CV
               url: cv.pdf
-            - name: Blog
-              url: blog/
+            - name: Publications
+              url: publications/
             - name: Blog(Japanese)
               url: https://zenn.dev/kaz20
 
