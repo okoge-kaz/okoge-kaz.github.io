@@ -65,9 +65,8 @@
 ## Japanese Publications
 
 ### **継続事前学習による日本語に強い大規模言語モデルの構築**
-(英訳: )
-
-<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -20px;">
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -15px;">(Construction of Strong Japanese LLMs through Continual Pre-training)</div>
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -5px;">
   <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-First_Author-007ec6?style=flat-square" alt="First Author"></span>
   <a href="https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/A8-5.pdf"><img src="https://img.shields.io/badge/NLP-2024-004513?style=flat-square" alt="NLP2024"></a>
   <span style="display: inline-block;"><img src="https://img.shields.io/badge/Award-Excellent_Paper-FFD700?style=flat-square" alt="Award"></span>
@@ -81,7 +80,8 @@
 * **Award:** 優秀賞 (Selected as one of the best papers, 12/599)
 
 ### **Swallowコーパス: 日本語大規模ウェブコーパス**
-<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -20px;">
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -15px;">(Swallow Corpus: A Large-Scale Japanese Web Corpus)</div>
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -5px;">
   <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-Co--Author-777777?style=flat-square" alt="Co-Author"></span>
   <a href="https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/C3-3.pdf"><img src="https://img.shields.io/badge/NLP-2024-004513?style=flat-square" alt="NLP2024"></a>
   <span style="display: inline-block;"><img src="https://img.shields.io/badge/Award-Excellent_Paper-FFD700?style=flat-square" alt="Award"></span>
@@ -91,9 +91,9 @@
 * **Venue:** 言語処理学会第30回年次大会 (NLP2024)
 * **Award:** 優秀賞 (Selected as one of the best papers, 12/599)
 
-
 ### **大規模言語モデルの分散並列学習**
-<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -20px;">
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -15px;">(Distributed Parallel Training of Large Language Models)</div>
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -5px;">
   <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-First_Author-007ec6?style=flat-square" alt="First Author"></span>
   <a href="https://www.ipsj.or.jp/award/9faeag0000004emc-att/5J-02.pdf"><img src="https://img.shields.io/badge/IPSJ-86th-005696?style=flat-square" alt="IPSJ"></a>
   <span style="display: inline-block;"><img src="https://img.shields.io/badge/Award-Best_Paper-FFD700?style=flat-square" alt="Award"></span>
@@ -106,7 +106,8 @@
 * **Award:** 大会優秀賞 (Best Paper Award of IPSJ National Convention)
 
 ### **Swallowコーパスv2: 教育的な日本語ウェブコーパスの構築**
-<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -20px;">
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -15px;">(Swallow Corpus v2: Building an Educational Japanese Web Corpus)</div>
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -5px;">
   <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-Co--Author-777777?style=flat-square" alt="Co-Author"></span>
   <a href="https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/Q3-6.pdf"><img src="https://img.shields.io/badge/NLP-2025-004513?style=flat-square" alt="NLP2025"></a>
 </div>
@@ -115,7 +116,8 @@
 * **Venue:** 言語処理学会第31回年次大会 (NLP2025)
 
 ### **模倣学習による大規模言語モデルの指示チューニング**
-<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -20px;">
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -15px;">(Instruction Tuning of Large Language Models via Imitation Learning)</div>
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -5px;">
   <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-Co--Author-777777?style=flat-square" alt="Co-Author"></span>
   <a href="https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/Q8-21.pdf"><img src="https://img.shields.io/badge/NLP-2025-004513?style=flat-square" alt="NLP2025"></a>
 </div>
@@ -124,7 +126,8 @@
 * **Venue:** 言語処理学会第31回年次大会 (NLP2025)
 
 ### **新聞記事からつくる 時事と社会に強い日本語LLM**
-<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -20px;">
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -15px;">(Building Japanese LLMs Strong in Current Events and Society from Newspaper Articles)</div>
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -5px;">
   <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-Co--Author-777777?style=flat-square" alt="Co-Author"></span>
   <a href="https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/C10-1.pdf"><img src="https://img.shields.io/badge/NLP-2025-004513?style=flat-square" alt="NLP2025"></a>
 </div>
