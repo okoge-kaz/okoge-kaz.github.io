@@ -1,18 +1,19 @@
 # Publications
 
+Google Scholar: https://scholar.google.co.jp/citations?user=jHXLs2wAAAAJ&hl=en
+
+
 ## Peer-Reviewed Conference Papers
 
 ---
-
 ## Workshop Papers
 
 ### **Why We Build Local Large Language Models: An Observational Analysis from 35 Japanese and Multilingual LLMs**
 <div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -20px;">
-  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-First_Author-007ec6?style=flat-square" alt="First Author"></span>
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-Co--Author-777777?style=flat-square" alt="Co-Author"></span>
   <a href="https://arxiv.org/abs/2412.14471"><img src="https://img.shields.io/badge/arXiv-2412.14471-b31b1b.svg?style=flat-square" alt="arXiv"></a>
   <a href="https://colmweb.org/"><img src="https://img.shields.io/badge/COLM_2025-MELT_Workshop-4b44ce?style=flat-square" alt="COLM 2025"></a>
   <span style="display: inline-block;"><img src="https://img.shields.io/badge/Award-Outstanding_Paper-FFD700?style=flat-square" alt="Award"></span>
-  <a href="YOUR_SLIDE_LINK_HERE"><img src="https://img.shields.io/badge/Slides-View_Deck-E4405F?logo=slideshare&style=flat-square" alt="Slides"></a>
 </div>
 
 * **Venue:** Conference on Language Modeling (COLM) Multilingual and Equitable Language Technologies Workshop 2025
@@ -20,13 +21,25 @@
 
 ### **llm-recipes: A Framework for Seamless Integration and Efficient Continual Pre-Training of Large Language Models**
 <div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -20px;">
-  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-Co--Author-777777?style=flat-square" alt="Co-Author"></span>
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-First_Author-007ec6?style=flat-square" alt="First Author"></span>
   <a href="https://sc24.supercomputing.org/"><img src="https://img.shields.io/badge/SC_2024-TPC_Workshop-005696?style=flat-square" alt="SC 2024"></a>
-  <a href="https://github.com/"><img src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github&style=flat-square" alt="GitHub"></a>
-  <a href="YOUR_SLIDE_LINK_HERE"><img src="https://img.shields.io/badge/Slides-View_Deck-E4405F?logo=slideshare&style=flat-square" alt="Slides"></a>
+  <a href="https://github.com/okoge-kaz/llm-recipes"><img src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github&style=flat-square" alt="GitHub"></a>
+  <a href="https://tpc.dev/wp-content/uploads/2024/11/sc24-tpc-workshop-FUJII.pdf"><img src="https://img.shields.io/badge/Slides-View_Deck-E4405F?logo=slideshare&style=flat-square" alt="Slides"></a>
 </div>
 
-* **Venue:** The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC24), Trillion Parameter Consortium (TPC) Workshop
+* **Venue:** SC24 (Supercomputing) Trillion Parameter Consortium (TPC) Workshop
+* **Contribution:** Led the development of a custom training framework designed for **0-day support** of new LLMs not yet supported by Megatron-LM.
+* **Tech Stack:** Built on **PyTorch FSDP-v1**, enabling SFT and Continual Pre-Training for any model compatible with Hugging Face Transformers.
+
+### **Heron-Bench: A Benchmark for Evaluating Vision Language Models in Japanese**
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -20px;">
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-Co--Author-777777?style=flat-square" alt="Co-Author"></span>
+  <a href="https://arxiv.org/abs/2404.07824"><img src="https://img.shields.io/badge/arXiv-2404.07824-b31b1b.svg?style=flat-square" alt="arXiv"></a>
+  <a href="https://cvpr.thecvf.com/"><img src="https://img.shields.io/badge/CVPR_2024-Wild_Vision_Workshop-1c5c9a?style=flat-square" alt="CVPR"></a>
+</div>
+
+* **Authors:** Yuichi Inoue, Kento Sasaki, Yuma Ochi, **Kazuki Fujii**, Kotaro Tanahashi, Yu Yamaguchi
+* **Venue:** CVPR 2024, The 3rd Workshop on Computer Vision in the Wild
 
 ---
 
@@ -34,32 +47,35 @@
 
 ### **Rewriting Pre-Training Data Boosts LLM Performance in Math and Code**
 <div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -20px;">
-  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-Co--Author-777777?style=flat-square" alt="Co-Author"></span>
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-First_Author-007ec6?style=flat-square" alt="First Author"></span>
   <a href="https://arxiv.org/abs/2505.02881"><img src="https://img.shields.io/badge/arXiv-2505.02881-b31b1b.svg?style=flat-square" alt="arXiv"></a>
-  <a href="LINK"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-ffd21e?style=flat-square" alt="Hugging Face"></a>
-  <a href="LINK"><img src="https://img.shields.io/badge/Code-GitHub-181717?logo=github&style=flat-square" alt="Code"></a>
+  <a href="https://huggingface.co/datasets/tokyotech-llm/swallow-math"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HF-Math_Dataset-ffd21e?style=flat-square" alt="HF Math"></a>
+  <a href="https://huggingface.co/datasets/tokyotech-llm/swallow-code"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HF-Code_Dataset-ffd21e?style=flat-square" alt="HF Code"></a>
 </div>
 
-* **Date:** 2025 (arXiv:2505.02881 [cs.LG])
+* **Contribution:** Led the entire project lifecycle—from inception and experimental design to dataset construction.
+* **Summary:** Proposed "LLM Rewriting" to synthesize high-quality pre-training data in math and code. Demonstrated that improving **style and logic** (beyond simple rephrasing) significantly boosts performance, achieving state-of-the-art results among open math/code pre-training corpora.
+* **Datasets:** Released [Swallow-Math](https://huggingface.co/datasets/tokyotech-llm/swallow-math) and [Swallow-Code](https://huggingface.co/datasets/tokyotech-llm/swallow-code) (v1 & v2).
 
 ### **Balancing Speed and Stability: The Trade-offs of FP8 vs. BF16 Training in LLMs**
 <div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -20px;">
-  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-Co--Author-777777?style=flat-square" alt="Co-Author"></span>
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-First_Author-007ec6?style=flat-square" alt="First Author"></span>
   <a href="https://arxiv.org/abs/2411.08719"><img src="https://img.shields.io/badge/arXiv-2411.08719-b31b1b.svg?style=flat-square" alt="arXiv"></a>
 </div>
 
-* **Date:** 2024 (arXiv:2411.08719 [cs.LG])
+* **Contribution:** Spearheaded the verification of FP8 training for the **Swallow Project** (Japanese & English Bilingual LLM).
+* **Summary:** Investigated FP8 stability for **Continual Pre-training of 70B models**. While prior works focused on from scratch training, I discovered that FP8 introduces instability during the continuous training phase of Llama-3-70B and demonstrated that the default DelayedScaling in Transformer Engine v1.x is insufficient for this regime.
 
 ### **LLM-jp: A Cross-organizational Project for the Research and Development of Fully Open Japanese LLMs**
 <div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -20px;">
   <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-Co--Author-777777?style=flat-square" alt="Co-Author"></span>
   <a href="https://arxiv.org/abs/2407.03963"><img src="https://img.shields.io/badge/arXiv-2407.03963-b31b1b.svg?style=flat-square" alt="arXiv"></a>
-  <a href="LINK"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-ffd21e?style=flat-square" alt="Hugging Face"></a>
+  <a href="https://huggingface.co/llm-jp"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-ffd21e?style=flat-square" alt="Hugging Face"></a>
 </div>
 
-* **Date:** 2024 (arXiv:2407.03963 [cs.CL])
+* **Role:** Served as the **Lead for Pre-training, Library Development, and Distributed Training** (May 2023 - Aug 2024).
+* **Summary:** Technical report on the [LLM-jp](https://llm-jp.nii.ac.jp/) initiative. I oversaw the infrastructure and training pipeline for building fully open Japanese LLMs from scratch.
 * **Note:** Authors are listed in alphabetical order.
-
 ---
 
 ## Japanese Publications
@@ -269,8 +285,8 @@
 ## Books
 
 ### **大規模言語モデル入門 Ⅱ 〜生成型LLMの実装と評価**
-<div style="color: #666; font-size: 0.9em; margin-top: -15px; margin-bottom: 10px;">(Introduction to Large Language Models II: Implementation and Evaluation)</div>
-<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center;">
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -15px;">(Introduction to Large Language Models II: Implementation and Evaluation)</div>
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -5px;">
   <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-Chapter_Author-007ec6?style=flat-square" alt="Role"></span>
   <span style="display: inline-block;"><img src="https://img.shields.io/badge/Publisher-Gijutsu--Hyohron-009944?style=flat-square" alt="Publisher"></span>
   <span style="display: inline-block;"><img src="https://img.shields.io/badge/Date-Sep_2024-777777?style=flat-square" alt="Date"></span>
