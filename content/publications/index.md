@@ -4,6 +4,20 @@
 
 ## Peer-Reviewed Conference Papers
 
+### **Rewriting Pre-Training Data Boosts LLM Performance in Math and Code**
+<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -20px;">
+  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-First_Author-007ec6?style=flat-square" alt="First Author"></span>
+  <a href="https://arxiv.org/abs/2505.02881"><img src="https://img.shields.io/badge/arXiv-2505.02881-b31b1b.svg?style=flat-square" alt="arXiv"></a>
+  <a href="https://huggingface.co/datasets/tokyotech-llm/swallow-math"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HF-Math_Dataset-ffd21e?style=flat-square" alt="HF Math"></a>
+  <a href="https://huggingface.co/datasets/tokyotech-llm/swallow-code"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HF-Code_Dataset-ffd21e?style=flat-square" alt="HF Code"></a>
+</div>
+
+* **Authors:** **Kazuki Fujii**, Yukito Tajima, Sakae Mizuki, Masaki Kawamura, Hinari Shimada, Taihei Shiotani, Koshiro Saito, Masanari Oi, Taishi Nakamura, Takumi Okamoto, Shigeki Ishida, Kakeru Hattori, Youmi Ma, Hiroya Takamura, Rio Yokota, Jun Sakuma, Naoaki Okazaki
+* **Venue:** International Conference on Learning Representations (ICLR), 2026
+* **Contribution:** Led the entire project lifecycle—from inception and experimental design to dataset construction.
+* **Summary:** Proposed "LLM Rewriting" to synthesize high-quality pre-training data in math and code. Demonstrated that improving **style and logic** (beyond simple rephrasing) significantly boosts performance, achieving state-of-the-art results among open math/code pre-training corpora.
+* **Datasets:** Released [Swallow-Math](https://huggingface.co/datasets/tokyotech-llm/swallow-math) and [Swallow-Code](https://huggingface.co/datasets/tokyotech-llm/swallow-code) (v1 & v2).
+
 ### **Building Instruction-Tuning Datasets from Human-Written Instructions with Open-Weight Large Language Models**
 <div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -20px;">
   <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-Co--Author-777777?style=flat-square" alt="Co-Author"></span>
@@ -85,18 +99,6 @@
 ---
 
 ## Preprints
-
-### **Rewriting Pre-Training Data Boosts LLM Performance in Math and Code**
-<div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -20px;">
-  <span style="display: inline-block;"><img src="https://img.shields.io/badge/Role-First_Author-007ec6?style=flat-square" alt="First Author"></span>
-  <a href="https://arxiv.org/abs/2505.02881"><img src="https://img.shields.io/badge/arXiv-2505.02881-b31b1b.svg?style=flat-square" alt="arXiv"></a>
-  <a href="https://huggingface.co/datasets/tokyotech-llm/swallow-math"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HF-Math_Dataset-ffd21e?style=flat-square" alt="HF Math"></a>
-  <a href="https://huggingface.co/datasets/tokyotech-llm/swallow-code"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HF-Code_Dataset-ffd21e?style=flat-square" alt="HF Code"></a>
-</div>
-
-* **Contribution:** Led the entire project lifecycle—from inception and experimental design to dataset construction.
-* **Summary:** Proposed "LLM Rewriting" to synthesize high-quality pre-training data in math and code. Demonstrated that improving **style and logic** (beyond simple rephrasing) significantly boosts performance, achieving state-of-the-art results among open math/code pre-training corpora.
-* **Datasets:** Released [Swallow-Math](https://huggingface.co/datasets/tokyotech-llm/swallow-math) and [Swallow-Code](https://huggingface.co/datasets/tokyotech-llm/swallow-code) (v1 & v2).
 
 ### **Balancing Speed and Stability: The Trade-offs of FP8 vs. BF16 Training in LLMs**
 <div style="display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: -20px;">
