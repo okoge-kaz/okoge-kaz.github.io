@@ -43,7 +43,9 @@ params:
     profileMode:
           enabled: true
           title: Kazuki Fujii
-          subtitle: "Kazuki Fujii is a Master's student at the Institute of Science Tokyo, leading the [Swallow Project](https://swallow-llm.github.io/index.en.html), an open bilingual LLM initiative for Japanese and English. His work focuses on large-scale pre-training, distributed training, FP8 mixed-precision with Megatron-LM and TransformerEngine, and improving the quality of code and math datasets for reasoning LLMs.
+          subtitle: "Kazuki Fujii is an incoming PhD student at the Institute of Science Tokyo (formerly Tokyo Tech). He is a core contributor to the [Swallow Project](https://swallow-llm.github.io/index.en.html), leading the development of open Japanese-English bilingual LLMs.</br></br>
+          His research sits at the intersection of HPC and Machine Learning, with a focus on large-scale distributed training and low-precision optimization (FP8/NVFP4) using Megatron-LM and TransformerEngine. He also researches data-centric approaches to improve reasoning capabilities in LLMs. His recent work on rewriting pre-training data for Math and Code was accepted to ICLR 2026.</br></br>
+          He will be presenting his work on Swallow LLM at NVIDIA GTC 2026. He is currently seeking research internship opportunities in the US.
           <br/><br/>
           Contact: kazuki.fujii [at] rio.scrc.iir.isct.ac.jp
           "
