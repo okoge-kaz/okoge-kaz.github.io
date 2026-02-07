@@ -21,6 +21,9 @@ menu:
         - name: Projects
           url: projects/
           weight: 4
+        - name: Tools
+          url: tools/
+          weight: 5
 
 params:
     description: "Kazuki Fujii (藤井一喜) – HPC & ML researcher at the Institute of Science Tokyo. Research on large-scale distributed training, low-precision optimization, and data-centric approaches for LLMs."
