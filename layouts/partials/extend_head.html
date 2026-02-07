@@ -1,3 +1,90 @@
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- SEO: Additional meta tags -->
+<meta name="author" content="Kazuki Fujii (藤井一喜)">
+<meta name="keywords" content="Kazuki Fujii, 藤井一喜, LLM, Large Language Models, distributed training, Megatron-LM, FP8, low-precision training, continual pre-training, Swallow Project, Institute of Science Tokyo, Tokyo Tech, NLP, HPC, machine learning, ICLR, COLM">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{{ .Permalink }}">
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Kazuki Fujii">
+<meta property="og:locale" content="en_US">
+{{- if .IsHome }}
+<meta property="og:title" content="Kazuki Fujii – HPC & ML Researcher">
+<meta property="og:description" content="Kazuki Fujii (藤井一喜) – PhD student at the Institute of Science Tokyo. Research on large-scale distributed training, low-precision optimization, and data-centric approaches for LLMs. Core contributor to the Swallow Project.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="{{ "picture.png" | absURL }}">
+{{- else }}
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary | truncate 160 }}{{ end }}">
+<meta property="og:type" content="article">
+{{- if .Params.cover }}
+<meta property="og:image" content="{{ .Params.cover.image | absURL }}">
+{{- else }}
+<meta property="og:image" content="{{ "picture.png" | absURL }}">
+{{- end }}
+{{- end }}
+<meta property="og:url" content="{{ .Permalink }}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@okoge_kaz">
+<meta name="twitter:creator" content="@okoge_kaz">
+
+<!-- JSON-LD Structured Data -->
+{{- if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Kazuki Fujii",
+  "alternateName": "藤井一喜",
+  "url": "https://okoge-kaz.github.io/",
+  "image": "{{ "picture.png" | absURL }}",
+  "jobTitle": "PhD Student",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "Institute of Science Tokyo"
+  },
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Tokyo Institute of Technology"
+    },
+    {
+      "@type": "HighSchool",
+      "name": "Azabu High School"
+    }
+  ],
+  "knowsAbout": ["Large Language Models", "Distributed Training", "FP8 Training", "Megatron-LM", "Continual Pre-Training", "NLP", "HPC"],
+  "sameAs": [
+    "https://github.com/okoge-kaz",
+    "https://x.com/okoge_kaz",
+    "https://www.linkedin.com/in/kazuki-fujii/",
+    "https://scholar.google.co.jp/citations?user=jHXLs2wAAAAJ&hl=en",
+    "https://bsky.app/profile/kazukifujii.bsky.social",
+    "https://zenn.dev/kaz20"
+  ]
+}
+</script>
+{{- else if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ .Title }}",
+  "author": {
+    "@type": "Person",
+    "name": "Kazuki Fujii",
+    "url": "https://okoge-kaz.github.io/"
+  },
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+  "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Summary | truncate 160 }}{{ end }}",
+  "url": "{{ .Permalink }}"
+}
+</script>
+{{- end }}

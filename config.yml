@@ -23,7 +23,7 @@ menu:
           weight: 4
 
 params:
-    description: "Kazuki Fujii – HPC & ML researcher at the Institute of Science Tokyo. Research on large-scale distributed training, low-precision optimization, and data-centric approaches for LLMs."
+    description: "Kazuki Fujii (藤井一喜) – HPC & ML researcher at the Institute of Science Tokyo. Research on large-scale distributed training, low-precision optimization, and data-centric approaches for LLMs."
     author: Kazuki Fujii
     # googleAnalyticsID: "G-XXXXX"
     DateFormat: "January 2006"

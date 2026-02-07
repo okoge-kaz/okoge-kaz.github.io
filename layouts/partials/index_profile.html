@@ -66,6 +66,7 @@
         </div>
 
         <h1>{{ .title | default site.Title | markdownify }}</h1>
+        <span class="name-ja">藤井 一喜</span>
         <span>{{ .subtitle | markdownify }}</span>
         {{- partial "social_icons.html" -}}
 
@@ -148,6 +149,32 @@
                     <div class="ri-gantt-track">
                         <div class="ri-gantt-bar active" style="left: 75.00%; right: 0%;"></div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="education">
+            <div class="edu-label">Education</div>
+            <div class="edu-items">
+                <div class="edu-item">
+                    <span class="edu-period">2026 – 2029</span>
+                    <span class="edu-sep"></span>
+                    <span class="edu-detail"><strong>PhD</strong> in CS, Institute of Science Tokyo <span class="edu-note">Adv: Rio Yokota</span></span>
+                </div>
+                <div class="edu-item">
+                    <span class="edu-period">2024 – 2026</span>
+                    <span class="edu-sep"></span>
+                    <span class="edu-detail"><strong>MS</strong> in CS, Institute of Science Tokyo <span class="edu-note">Adv: Jun Sakuma</span></span>
+                </div>
+                <div class="edu-item">
+                    <span class="edu-period">2020 – 2024</span>
+                    <span class="edu-sep"></span>
+                    <span class="edu-detail"><strong>BS</strong>, Tokyo Institute of Technology <span class="edu-note">Adv: Rio Yokota</span></span>
+                </div>
+                <div class="edu-item">
+                    <span class="edu-period">2016 – 2019</span>
+                    <span class="edu-sep"></span>
+                    <span class="edu-detail">Azabu High School (麻布高等学校)</span>
                 </div>
             </div>
         </div>
