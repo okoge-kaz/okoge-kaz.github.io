@@ -9,7 +9,7 @@ ShowReadingTime: true
 math: false
 ---
 
-> This post is an English version of my Japanese article on Zenn: [gpt-ossをNVIDIA NeMoで学習する](https://zenn.dev/kaz20)
+> This post is an English version of my Japanese article on Zenn: [NVIDIA NeMoを利用したGPT-OSSの学習](https://zenn.dev/turing_motors/articles/81cf3128b22c63)
 
 ## Introduction
 
