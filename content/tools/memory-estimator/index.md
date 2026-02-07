@@ -28,7 +28,6 @@ Estimate per-GPU memory consumption during LLM training with 5D parallelism (TP,
 <option value="llama3-70b">Llama-3.1-70B</option>
 <option value="llama3-405b">Llama-3.1-405B</option>
 <option value="qwen3-8b">Qwen3-8B</option>
-<option value="qwen3-72b">Qwen3-72B</option>
 <option value="qwen3-235b-moe">Qwen3-235B-A22B (MoE)</option>
 <option value="deepseek-v3">DeepSeek-V3 (MoE)</option>
 <option value="custom">Custom</option>
@@ -190,6 +189,14 @@ Estimate per-GPU memory consumption during LLM training with 5D parallelism (TP,
 <input type="number" id="mem-vpp" value="1" min="1">
 </div>
 
+<div class="tool-input-group">
+<label>Standalone Embedding Stage</label>
+<select id="mem-standalone-embed">
+<option value="0">OFF (embed in first/last PP stage)</option>
+<option value="1">ON (embed/LM head as separate PP stages)</option>
+</select>
+</div>
+
 <div class="tool-section-label">GPU</div>
 
 <div class="tool-input-group">
@@ -205,6 +212,8 @@ Estimate per-GPU memory consumption during LLM training with 5D parallelism (TP,
 </div>
 
 </div>
+
+<div class="tool-validation" id="mem-validation"></div>
 
 <div class="tool-result" id="mem-result">
 <div class="tool-result-title">Memory Breakdown (per GPU)</div>
@@ -286,17 +295,17 @@ Arithmetic Intensity (AI) = FLOPs / Bytes. If AI &lt; ops:byte ratio of the GPU,
 <div class="tool-formula" style="margin-top:12px">
 <div class="tool-formula-label">References</div>
 <code style="font-size:11px;word-break:break-word;">
-Williams et al., "Roofline: An Insightful Visual Performance Model" (2009) &bull;
+<a href="https://arxiv.org/abs/2411.06465" style="color:var(--accent)">Fujii et al., &ldquo;Accelerating Large Language Model Training with 4D Parallelism and Memory Consumption Estimator&rdquo; (arXiv:2411.06465)</a> &mdash; by the author of this tool &bull;
+Williams et al., &ldquo;Roofline: An Insightful Visual Performance Model&rdquo; (2009) &bull;
 <a href="https://jax-ml.github.io/scaling-book/roofline/" style="color:var(--accent)">JAX Scaling Book &mdash; Rooflines</a> &bull;
-<a href="https://kipp.ly/transformer-inference-arithmetic/" style="color:var(--accent)">kipply &mdash; Transformer Inference Arithmetic</a> &bull;
-<a href="https://arxiv.org/abs/2411.06465" style="color:var(--accent)">Fujii et al. (arXiv:2411.06465)</a>
+<a href="https://kipp.ly/transformer-inference-arithmetic/" style="color:var(--accent)">kipply &mdash; Transformer Inference Arithmetic</a>
 </code>
 </div>
 </div>
 
 <div class="tool-note">
 <div class="tool-note-title">Note</div>
-These are <strong>theoretical estimates</strong>. Actual memory consumption during training includes additional overheads not modeled here:
+This estimator targets <strong>Transformer-based LLMs</strong> (decoder-only, with SwiGLU FFN and RMSNorm). It does not support SSM-based models (Mamba, RWKV, etc.), Gated Linear Networks, or Diffusion models. These are <strong>theoretical estimates</strong>. Actual memory consumption during training includes additional overheads not modeled here:
 <ul style="margin:8px 0 0 16px;font-size:13px;color:var(--secondary)">
 <li><strong>NCCL communication buffers</strong>: Each parallelism dimension creates its own communicator. Total NCCL overhead can reach 1&ndash;20 GB depending on the number of communicators and <code>NCCL_BUFFSIZE</code>. This estimator includes a rough estimate (~0.5 GB per communicator).</li>
 <li><strong>CUDA context</strong>: ~300&ndash;500 MB per GPU for the CUDA runtime and driver.</li>
@@ -305,4 +314,17 @@ These are <strong>theoretical estimates</strong>. Actual memory consumption duri
 </ul>
 </div>
 
+</div>
+
+<div class="tool-formula" style="margin-top:16px">
+<div class="tool-formula-label">Citation</div>
+<code style="font-size:11px;word-break:break-word;">@misc{fujii2024acceleratinglargelanguagemodel,
+      title={Accelerating Large Language Model Training with 4D Parallelism and Memory Consumption Estimator},
+      author={Kazuki Fujii and Kohei Watanabe and Rio Yokota},
+      year={2024},
+      eprint={2411.06465},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2411.06465},
+}</code>
 </div>

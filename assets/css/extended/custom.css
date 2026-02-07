@@ -1188,6 +1188,28 @@ button#theme-toggle:hover {
     cursor: pointer;
 }
 
+/* Validation warnings */
+.tool-validation {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 12px;
+}
+
+.tool-validation:empty {
+    display: none;
+}
+
+.tool-validation-item {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    padding: 8px 12px;
+    border-radius: var(--radius);
+    border: 1px solid #f85149;
+    background: rgba(248, 81, 73, 0.08);
+    color: #f85149;
+}
+
 /* Responsive for tools */
 @media (max-width: 768px) {
     .tool-form {

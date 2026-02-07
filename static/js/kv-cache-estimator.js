@@ -18,7 +18,6 @@
     'llama3-70b':     { h: 8192,  h_ffn: 28672, L: 80,  a: 64,  k: 8,   headDim: 128, v: 128256, tiedEmbed: false, experts: 1,   sharedExperts: 0, expertHffn: 28672, topk: 1, seqLen: 8192   },
     'llama3-405b':    { h: 16384, h_ffn: 53248, L: 126, a: 128, k: 8,   headDim: 128, v: 128256, tiedEmbed: false, experts: 1,   sharedExperts: 0, expertHffn: 53248, topk: 1, seqLen: 131072 },
     'qwen3-8b':       { h: 4096,  h_ffn: 12288, L: 36,  a: 32,  k: 8,   headDim: 128, v: 151936, tiedEmbed: true,  experts: 1,   sharedExperts: 0, expertHffn: 12288, topk: 1, seqLen: 32768  },
-    'qwen3-72b':      { h: 8192,  h_ffn: 29568, L: 80,  a: 64,  k: 8,   headDim: 128, v: 152064, tiedEmbed: false, experts: 1,   sharedExperts: 0, expertHffn: 29568, topk: 1, seqLen: 32768  },
     'qwen3-235b-moe': { h: 4096,  h_ffn: 12288, L: 94,  a: 64,  k: 4,   headDim: 64,  v: 151936, tiedEmbed: true,  experts: 128, sharedExperts: 0, expertHffn: 1536,  topk: 8, seqLen: 32768  },
     'deepseek-v3':    { h: 7168,  h_ffn: 18432, L: 61,  a: 128, k: 128, headDim: 128, v: 129280, tiedEmbed: false, experts: 256, sharedExperts: 1, expertHffn: 2048,  topk: 8, seqLen: 65536  },
   };
@@ -211,6 +210,21 @@
     var gpuKey   = els.gpuType.value;
 
     var isMoE = numExperts > 1;
+
+    // ===== Validation =====
+    var warnings = [];
+    if (tp > 1) {
+      if (h > 0 && h % tp !== 0) warnings.push('hidden_size (' + h + ') must be divisible by tp (' + tp + ')');
+      if (a > 0 && a % tp !== 0) warnings.push('num_attention_heads (' + a + ') must be divisible by tp (' + tp + ')');
+      if (k > 0 && k % tp !== 0) warnings.push('num_kv_heads (' + k + ') must be divisible by tp (' + tp + ')');
+      if (k > 0 && tp > k) warnings.push('tp (' + tp + ') cannot exceed num_kv_heads (' + k + ')');
+    }
+    var valEl = $('kv-validation');
+    if (warnings.length > 0) {
+      valEl.innerHTML = warnings.map(function (w) { return '<div class="tool-validation-item">\u26A0 ' + w + '</div>'; }).join('');
+    } else {
+      valEl.innerHTML = '';
+    }
 
     // ===== Architecture Info =====
     var archInfo = getAttnType(a, k);

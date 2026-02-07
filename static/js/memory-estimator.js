@@ -17,7 +17,6 @@
     'llama3-70b':     { h: 8192,  h_ffn: 28672, L: 80,  a: 64,  k: 8,   headDim: 128, v: 128256, tiedEmbed: false, experts: 1,   sharedExperts: 0, expertHffn: 28672, topk: 1, seqLen: 4096  },
     'llama3-405b':    { h: 16384, h_ffn: 53248, L: 126, a: 128, k: 8,   headDim: 128, v: 128256, tiedEmbed: false, experts: 1,   sharedExperts: 0, expertHffn: 53248, topk: 1, seqLen: 4096  },
     'qwen3-8b':       { h: 4096,  h_ffn: 12288, L: 36,  a: 32,  k: 8,   headDim: 128, v: 151936, tiedEmbed: true,  experts: 1,   sharedExperts: 0, expertHffn: 12288, topk: 1, seqLen: 4096  },
-    'qwen3-72b':      { h: 8192,  h_ffn: 29568, L: 80,  a: 64,  k: 8,   headDim: 128, v: 152064, tiedEmbed: false, experts: 1,   sharedExperts: 0, expertHffn: 29568, topk: 1, seqLen: 4096  },
     'qwen3-235b-moe': { h: 4096,  h_ffn: 12288, L: 94,  a: 64,  k: 4,   headDim: 64,  v: 151936, tiedEmbed: true,  experts: 128, sharedExperts: 0, expertHffn: 1536,  topk: 8, seqLen: 4096  },
     'deepseek-v3':    { h: 7168,  h_ffn: 18432, L: 61,  a: 128, k: 128, headDim: 128, v: 129280, tiedEmbed: false, experts: 256, sharedExperts: 1, expertHffn: 2048,  topk: 8, seqLen: 4096  },
   };
@@ -53,6 +52,7 @@
     els.distOptim    = $('mem-dist-optim');
     els.ppSched      = $('mem-pp-sched');
     els.vpp          = $('mem-vpp');
+    els.standaloneEmbed = $('mem-standalone-embed');
     els.gpuType      = $('mem-gpu-type');
 
     els.preset.addEventListener('change', applyPreset);
@@ -217,10 +217,37 @@
     var distOptim = parseInt(els.distOptim.value);
     var ppSched   = els.ppSched.value;
     var vpp       = parseInt(els.vpp.value) || 1;
+    var standaloneEmbed = parseInt(els.standaloneEmbed.value) === 1;
     var gpuKey    = els.gpuType.value;
 
     var isMoE = numExperts > 1;
     var optimBytesPerParam = optimType === 'adam' ? 12 : 8;
+
+    // ===== Validation =====
+    var warnings = [];
+    if (tp > 1) {
+      if (h > 0 && h % tp !== 0) warnings.push('hidden_size (' + h + ') must be divisible by tp (' + tp + ')');
+      if (a > 0 && a % tp !== 0) warnings.push('num_attention_heads (' + a + ') must be divisible by tp (' + tp + ')');
+      if (k > 0 && k % tp !== 0) warnings.push('num_kv_heads (' + k + ') must be divisible by tp (' + tp + ')');
+      if (k > 0 && tp > k) warnings.push('tp (' + tp + ') cannot exceed num_kv_heads (' + k + ')');
+    }
+    if (pp > 1) {
+      if (standaloneEmbed) {
+        if (L > 0 && (L + 2) % pp !== 0) warnings.push('(num_layers + 2) = ' + (L + 2) + ' must be divisible by pp (' + pp + ') with standalone embedding');
+      } else {
+        if (L > 0 && L % pp !== 0) warnings.push('num_layers (' + L + ') must be divisible by pp (' + pp + ')');
+      }
+    }
+    if (ep > 1 && isMoE) {
+      if (numExperts % ep !== 0) warnings.push('num_experts (' + numExperts + ') must be divisible by ep (' + ep + ')');
+      if (ep > numExperts) warnings.push('ep (' + ep + ') cannot exceed num_experts (' + numExperts + ')');
+    }
+    var valEl = $('mem-validation');
+    if (warnings.length > 0) {
+      valEl.innerHTML = warnings.map(function (w) { return '<div class="tool-validation-item">\u26A0 ' + w + '</div>'; }).join('');
+    } else {
+      valEl.innerHTML = '';
+    }
 
     // ===== Architecture Info =====
     var archInfo = getAttnType(a, k);
@@ -253,7 +280,23 @@
     var totalParams = totalLayerParams + embedParams + lmHeadParams + finalNormParams;
 
     // ===== Per-GPU Parameters =====
-    var layersPerStage = Math.ceil(L / pp);
+    // With standalone embedding: embed/LM head are separate PP stages
+    // Total virtual units = L + 2, each stage gets (L+2)/pp units
+    // Stages with embed/LM head have 1 fewer transformer layer
+    // Worst-case (middle stages): (L+2)/pp transformer layers
+    var layersPerStage;
+    if (pp === 1) {
+      layersPerStage = L;
+    } else if (standaloneEmbed) {
+      // Middle stages get (L+2)/pp layers, edge stages get (L+2)/pp - 1
+      // Use middle stage (worst case for transformer layers)
+      layersPerStage = Math.ceil(L / (pp - 2 > 0 ? pp - 2 : 1));
+      if (pp > 2 && (L + 2) % pp === 0) {
+        layersPerStage = (L + 2) / pp;
+      }
+    } else {
+      layersPerStage = Math.ceil(L / pp);
+    }
 
     var attnParamsPerGpu = (attnParamsPerLayer * layersPerStage) / tp;
     var ffnParamsPerGpu;
@@ -279,19 +322,25 @@
     }
 
     // ===== Activation Memory =====
-    var actBytes = 2; // BF16
+    // Following Fujii et al. (arXiv:2411.06465)
+    // Formula: sbh(12 + 4k/a + 8h_ffn/h) bytes per layer (BF16)
+    // Coefficients already include BF16 (2 bytes): attn=6+4k/a, ffn=2+8h_ffn/h, norm=4
+    // With TP (hidden dim split) and CP (seq dim split): / (t × c)
 
-    // Per layer activations (FlashAttention)
-    var attnActPerLayer = s * b * h * (6 + 4 * k / a) * actBytes;
+    // Attention: 3 saved tensors × sbh + 2 KV tensors × sbh(k/a), each BF16
+    var attnActPerLayer = s * b * h * (6 + 4 * k / a);
 
+    // FFN (SwiGLU): input + 4 intermediates of sb×h_ffn, each BF16
     var ffnActPerLayer;
     if (isMoE) {
-      ffnActPerLayer = 2 * s * b * (h + 4 * expertHffn) * topK * actBytes;
+      ffnActPerLayer = 2 * s * b * (h + 4 * expertHffn * topK);
     } else {
-      ffnActPerLayer = 2 * s * b * (h + 4 * h_ffn) * actBytes;
+      ffnActPerLayer = 2 * s * b * (h + 4 * h_ffn);
     }
 
-    var normActPerLayer = 4 * s * b * h * actBytes;
+    // RMSNorm: 2 norms × sbh, each BF16
+    var normActPerLayer = 4 * s * b * h;
+
     var actPerLayer = attnActPerLayer + ffnActPerLayer + normActPerLayer;
     var actPerLayerPerGpu = actPerLayer / (tp * cp);
 
@@ -340,12 +389,13 @@
     $('mem-f-optim').textContent = optimFormula + ' = ' + formatBytes(optimMem);
 
     $('mem-r-act').textContent = formatBytes(totalAct);
-    var actFormula = 'act/layer=' + formatBytes(actPerLayerPerGpu);
+    var ffnCoeff = isMoE ? (expertHffn * topK) : h_ffn;
+    var actFormula = 'sbh(12+4k/a+8h_ffn/h)/(t\u00D7c) = ' + formatBytes(actPerLayerPerGpu) + '/layer';
     if (pp === 1) {
-      actFormula += ' \u00D7 ' + L + ' layers';
+      actFormula += ' \u00D7 ' + L + 'L';
     } else {
       var effLayers = (ppSched === 'interleaved' && vpp > 1) ? Math.ceil(L / (pp * vpp)) : layersPerStage;
-      actFormula += ' \u00D7 ' + effLayers + ' layers \u00D7 ' + numInflight + ' inflight';
+      actFormula += ' \u00D7 ' + effLayers + 'L \u00D7 ' + numInflight + ' inflight';
     }
     $('mem-f-act').textContent = actFormula;
 
@@ -383,11 +433,12 @@
     pdHtml += '<b>Per GPU (TP=' + tp + ', PP=' + pp + '): ' + formatNum(totalParamsPerGpu) + '</b>';
     if (isMoE && ep > 1) pdHtml += ' (EP=' + ep + ' applied to FFN)';
     pdHtml += '\n<b>Layers/stage:</b> ' + layersPerStage;
+    if (standaloneEmbed && pp > 1) pdHtml += ' (standalone embed: (L+2)/pp = ' + (L + 2) + '/' + pp + ')';
     $('mem-param-detail').innerHTML = pdHtml;
 
     renderBarChart(paramsMem, gradsMem, optimMem, totalAct, ncclMem, totalMem);
     renderGpuFit(totalMem, gpuKey);
-    renderRoofline(h, h_ffn, a, k, headDim, s, b, tp, actBytes, gpuKey, isMoE, numExperts, topK, expertHffn);
+    renderRoofline(h, h_ffn, a, k, headDim, s, b, tp, 2, gpuKey, isMoE, numExperts, topK, expertHffn);
   }
 
   function renderBarChart(params, grads, optim, act, nccl, total) {

@@ -28,7 +28,6 @@ Estimate total GPU memory for LLM inference: model weights, KV cache, and activa
 <option value="llama3-70b">Llama-3.1-70B</option>
 <option value="llama3-405b">Llama-3.1-405B</option>
 <option value="qwen3-8b">Qwen3-8B</option>
-<option value="qwen3-72b">Qwen3-72B</option>
 <option value="qwen3-235b-moe">Qwen3-235B-A22B (MoE)</option>
 <option value="deepseek-v3">DeepSeek-V3 (MoE)</option>
 <option value="custom">Custom</option>
@@ -164,6 +163,8 @@ Estimate total GPU memory for LLM inference: model weights, KV cache, and activa
 
 </div>
 
+<div class="tool-validation" id="kv-validation"></div>
+
 <div class="tool-result" id="kv-result">
 <div class="tool-result-title">Memory Breakdown (per GPU)</div>
 
@@ -239,7 +240,8 @@ Arithmetic Intensity (AI) = FLOPs / Bytes. If AI &lt; ops:byte ratio of the GPU,
 <div class="tool-formula" style="margin-top:12px">
 <div class="tool-formula-label">References</div>
 <code style="font-size:11px;word-break:break-word;">
-Williams et al., "Roofline: An Insightful Visual Performance Model" (2009) &bull;
+<a href="https://arxiv.org/abs/2411.06465" style="color:var(--accent)">Fujii et al., &ldquo;Accelerating Large Language Model Training with 4D Parallelism and Memory Consumption Estimator&rdquo; (arXiv:2411.06465)</a> &mdash; by the author of this tool &bull;
+Williams et al., &ldquo;Roofline: An Insightful Visual Performance Model&rdquo; (2009) &bull;
 <a href="https://jax-ml.github.io/scaling-book/roofline/" style="color:var(--accent)">JAX Scaling Book &mdash; Rooflines</a> &bull;
 <a href="https://kipp.ly/transformer-inference-arithmetic/" style="color:var(--accent)">kipply &mdash; Transformer Inference Arithmetic</a>
 </code>
@@ -248,7 +250,24 @@ Williams et al., "Roofline: An Insightful Visual Performance Model" (2009) &bull
 
 <div class="tool-note">
 <div class="tool-note-title">Note</div>
-This estimator assumes the full max sequence length is allocated for KV cache. With <strong>paged attention</strong> (e.g., vLLM, TGI), KV cache pages are allocated on-demand, so actual memory usage may be significantly lower when serving requests shorter than the max context. Additionally, inference frameworks have their own memory overhead (CUDA context ~300-500 MB, framework buffers, etc.) which is not included here.
+This estimator targets <strong>Transformer-based LLMs</strong> (decoder-only, with SwiGLU FFN and RMSNorm). It does not support SSM-based models (Mamba, RWKV, etc.), Gated Linear Networks, or Diffusion models. Additionally:
+<ul style="margin:8px 0 0 16px;font-size:13px;color:var(--secondary)">
+<li>KV cache assumes the full max sequence length is allocated. With <strong>paged attention</strong> (e.g., vLLM, TGI), pages are allocated on-demand, so actual usage may be lower.</li>
+<li>Inference frameworks have their own memory overhead (CUDA context ~300&ndash;500 MB, framework buffers, etc.) which is not included here.</li>
+</ul>
 </div>
 
+</div>
+
+<div class="tool-formula" style="margin-top:16px">
+<div class="tool-formula-label">Citation</div>
+<code style="font-size:11px;word-break:break-word;">@misc{fujii2024acceleratinglargelanguagemodel,
+      title={Accelerating Large Language Model Training with 4D Parallelism and Memory Consumption Estimator},
+      author={Kazuki Fujii and Kohei Watanabe and Rio Yokota},
+      year={2024},
+      eprint={2411.06465},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2411.06465},
+}</code>
 </div>
