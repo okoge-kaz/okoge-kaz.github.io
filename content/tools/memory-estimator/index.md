@@ -311,6 +311,7 @@ This estimator targets <strong>Transformer-based LLMs</strong> (decoder-only, wi
 <li><strong>CUDA context</strong>: ~300&ndash;500 MB per GPU for the CUDA runtime and driver.</li>
 <li><strong>Memory fragmentation</strong>: PyTorch's caching allocator may hold more memory than actually used.</li>
 <li><strong>Temporary buffers</strong>: All-gather buffers during distributed optimizer gather, pipeline send/recv buffers, etc.</li>
+<li><strong>MoE routing imbalance</strong>: This estimator assumes uniform token distribution across experts. In practice, routing can be imbalanced&mdash;tokens may concentrate on specific experts, causing higher activation memory on those Expert Parallel ranks and potentially triggering OOM even when the average estimate fits in memory. Load balancing loss mitigates but does not eliminate this risk.</li>
 </ul>
 </div>
 
