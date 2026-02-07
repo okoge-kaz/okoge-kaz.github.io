@@ -30,6 +30,7 @@
 .social-icons a {
     display: inline-flex;
     padding: 10px 14px 10px 0px;
+    transition: color 0.25s ease, transform 0.2s ease;
 }
 
 .social-icons a svg {
@@ -38,7 +39,8 @@
 }
 
 .social-icons a:hover {
-    color: var(--darkcolor);
+    color: var(--accent);
+    transform: translateY(-2px);
 }
 
 code {

@@ -5,7 +5,13 @@
     margin-inline-start: auto;
     margin-inline-end: auto;
     line-height: var(--header-height);
-    background: var(--code-bg);
+    background: var(--theme);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .nav a {
@@ -38,7 +44,20 @@
 
 button#theme-toggle {
     font-size: 20px;
-    margin: auto 4px;
+    margin: auto var(--gap);
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--secondary);
+    padding: 6px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button#theme-toggle:hover {
+    color: var(--accent);
 }
 
 body.dark #moon {
@@ -67,7 +86,8 @@ body:not(.dark) #sun {
 }
 
 #menu .active {
-    border-bottom: 2px solid var(--darkcolor);
+    border-bottom: none;
+    color: var(--accent);
 }
 
 .lang-switch li,

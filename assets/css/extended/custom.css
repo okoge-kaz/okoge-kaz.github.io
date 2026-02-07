@@ -1,0 +1,643 @@
+/* ===== Typography ===== */
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+code,
+pre,
+.post-content code,
+.post-content pre code {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
+
+/* ===== Site Logo / Name ===== */
+
+.logo a {
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+/* ===== Navigation ===== */
+
+#menu a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    text-transform: lowercase;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+#menu .active {
+    border-bottom: none;
+}
+
+#menu .active a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    border-radius: 1px;
+}
+
+/* ===== Smooth Transitions ===== */
+
+body,
+.nav,
+.footer,
+.post-entry,
+.button,
+.social-icons a,
+#theme-toggle {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ===== Card Hover Effects ===== */
+
+.post-entry {
+    transition: transform 0.2s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-entry:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px var(--accent-glow);
+}
+
+/* ===== Profile Section ===== */
+
+.profile .profile_inner h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    letter-spacing: -0.5px;
+}
+
+.profile .profile_inner > span {
+    color: var(--secondary);
+    line-height: 1.7;
+}
+
+/* Terminal-style greeting */
+.terminal-greeting {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: var(--accent);
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.terminal-greeting .cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background: var(--accent);
+    margin-left: 4px;
+    animation: blink 1.2s step-end infinite;
+    vertical-align: text-bottom;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Upcoming schedule */
+.upcoming-schedule {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px 16px;
+    background: var(--entry);
+    width: fit-content;
+    max-width: 100%;
+}
+
+.schedule-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.schedule-items {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.schedule-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--secondary);
+    transition: color 0.2s ease;
+}
+
+.schedule-item:hover {
+    color: var(--primary);
+}
+
+.schedule-date {
+    font-size: 12px;
+    color: var(--secondary);
+    min-width: 72px;
+    opacity: 0.8;
+}
+
+.schedule-sep {
+    width: 16px;
+    height: 1px;
+    background: var(--tertiary);
+    flex-shrink: 0;
+}
+
+.schedule-event {
+    font-size: 13px;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.schedule-detail {
+    font-size: 11px;
+    color: var(--accent);
+    font-weight: 400;
+    margin-left: 4px;
+    padding: 1px 6px;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    opacity: 0.85;
+}
+
+/* ===== Research Interests (Homepage) ===== */
+
+.research-interests {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    margin-top: 24px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    background: var(--entry);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ri-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.ri-gantt {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ri-gantt-header {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 2px;
+}
+
+.ri-gantt-spacer {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.ri-gantt-year {
+    flex: 1;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--secondary);
+    text-align: left;
+    padding-left: 4px;
+    border-left: 1px solid var(--border);
+    opacity: 0.7;
+}
+
+.ri-gantt-row {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    min-height: 26px;
+}
+
+.ri-gantt-topic {
+    width: 200px;
+    flex-shrink: 0;
+    font-size: 11px;
+    color: var(--primary);
+    font-weight: 500;
+    padding-right: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.2s ease;
+}
+
+.ri-gantt-track {
+    flex: 1;
+    height: 16px;
+    position: relative;
+    border-left: 1px solid color-mix(in srgb, var(--border) 40%, transparent);
+}
+
+/* Year gridlines on each track */
+.ri-gantt-track::before,
+.ri-gantt-track::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: color-mix(in srgb, var(--border) 40%, transparent);
+}
+
+.ri-gantt-track::before {
+    left: 25%;
+}
+
+.ri-gantt-track::after {
+    left: 50%;
+}
+
+/* 75% gridline via box-shadow trick */
+.ri-gantt-row:last-child .ri-gantt-track::after {
+    box-shadow: calc(25vw) 0 0 0 color-mix(in srgb, var(--border) 40%, transparent);
+}
+
+.ri-gantt-bar {
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    border-radius: 4px;
+    transition: opacity 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ri-gantt-bar.active {
+    background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 60%, transparent));
+    box-shadow: 0 0 6px var(--accent-glow);
+}
+
+.ri-gantt-bar.ended {
+    background: var(--secondary);
+    opacity: 0.3;
+    border-radius: 4px;
+}
+
+.ri-gantt-row:hover .ri-gantt-topic {
+    color: var(--accent);
+}
+
+.ri-gantt-row:hover .ri-gantt-bar.active {
+    box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.ri-gantt-row:hover .ri-gantt-bar.ended {
+    opacity: 0.5;
+}
+
+/* Pulse dot on active bar end */
+@keyframes gantt-pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+.ri-gantt-bar.active::after {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: gantt-pulse 2s ease-in-out infinite;
+}
+
+/* ===== Now Working On (Homepage) ===== */
+
+.now-working-on {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px 16px;
+    background: var(--entry);
+    width: fit-content;
+    max-width: 100%;
+}
+
+.nwo-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.nwo-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nwo-item {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.25s ease;
+    box-shadow: none;
+}
+
+.nwo-item:hover {
+    border-color: var(--accent);
+    background: var(--accent-glow);
+    box-shadow: 0 2px 12px var(--accent-glow);
+    transform: translateX(4px);
+}
+
+.nwo-name {
+    font-weight: 600;
+    color: var(--primary);
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+.nwo-desc {
+    font-size: 12px;
+    color: var(--secondary);
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ===== Publications Page ===== */
+
+.pub-entry {
+    margin-bottom: 28px;
+    padding: 16px 20px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--entry);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pub-entry:hover {
+    border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+    box-shadow: 0 2px 12px var(--accent-glow);
+}
+
+.pub-entry.first-author {
+    border-left: 3px solid var(--accent);
+    background: color-mix(in srgb, var(--accent) 4%, var(--entry));
+}
+
+.pub-entry.first-author:hover {
+    border-left-color: var(--accent);
+    box-shadow: 0 2px 16px var(--accent-glow);
+}
+
+.pub-entry h3 {
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+    font-size: 1.05rem !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.pub-entry ul {
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.pub-entry ul li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.pub-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Year divider for talks section */
+.year-divider {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 28px 0 16px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* ===== Projects Page ===== */
+
+.post-content h3 {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* ===== Buttons ===== */
+
+.button {
+    background: transparent;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    transition: all 0.25s ease;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+}
+
+.button:hover {
+    background: var(--accent-glow);
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+/* ===== Social Icons ===== */
+
+.social-icons a {
+    transition: color 0.25s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+/* ===== Profile Image ===== */
+
+.profile img {
+    border: 2px solid var(--border);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile img:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* ===== Post Content ===== */
+
+.post-content blockquote {
+    border-inline-start: 4px solid var(--accent);
+    background: var(--accent-glow);
+    padding: 12px 20px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.post-content h2 {
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* ===== Tags ===== */
+
+.post-tags a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    border: 1px solid var(--border);
+    transition: all 0.25s ease;
+}
+
+.post-tags a:hover {
+    border-color: var(--accent);
+    background: var(--accent-glow);
+    color: var(--accent);
+}
+
+/* ===== ToC ===== */
+
+.toc {
+    border: 1px solid var(--border);
+    background: var(--entry);
+}
+
+.toc .details {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Code Blocks ===== */
+
+.post-content .highlight:not(table) {
+    border: 1px solid var(--border);
+}
+
+.post-content pre code {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ===== Scroll-to-top ===== */
+
+.top-link {
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.top-link:hover {
+    box-shadow: 0 0 15px var(--accent-glow);
+    transform: translateY(-2px);
+}
+
+/* ===== Theme Toggle ===== */
+
+button#theme-toggle {
+    transition: transform 0.3s ease;
+}
+
+button#theme-toggle:hover {
+    transform: rotate(30deg);
+}
+
+/* ===== Selection ===== */
+
+::selection {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 768px) {
+    .profile .profile_inner h1 {
+        font-size: 2rem;
+    }
+
+    .terminal-greeting {
+        font-size: 12px;
+    }
+
+    .upcoming-schedule,
+    .now-working-on,
+    .research-interests {
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .ri-gantt-spacer,
+    .ri-gantt-topic {
+        width: 110px;
+        min-width: 110px;
+        font-size: 9px;
+    }
+
+    .ri-gantt-year {
+        font-size: 9px;
+    }
+
+    .ri-gantt-row {
+        min-height: 22px;
+    }
+
+    .ri-gantt-track {
+        height: 12px;
+    }
+
+    .schedule-date {
+        min-width: 62px;
+        font-size: 11px;
+    }
+
+    .schedule-detail {
+        display: inline-block;
+        margin-top: 2px;
+    }
+
+    .nwo-item {
+        flex-direction: column;
+        gap: 4px;
+    }
+}

@@ -24,7 +24,13 @@
 
 .profile img {
     border-radius: 50%;
-    border: 1px solid var(--tertiary);
+    border: 2px solid var(--border);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile img:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px var(--accent-glow);
 }
 
 .buttons {
@@ -32,10 +38,12 @@
 }
 
 .button {
-    background: var(--tertiary);
+    background: transparent;
+    border: 1.5px solid var(--border);
     border-radius: var(--radius);
     margin: 6px 12px 6px 0px;
     padding: 10px;
+    transition: all 0.25s ease;
 }
 
 .button-inner {
@@ -43,5 +51,8 @@
 }
 
 .button:hover {
-    background: var(--lightcolor);
+    background: var(--accent-glow);
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 0 15px var(--accent-glow);
 }

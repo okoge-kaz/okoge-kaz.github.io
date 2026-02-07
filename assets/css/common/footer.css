@@ -9,7 +9,8 @@
     padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
     text-align: center;
     line-height: 20px;
-    background: var(--code-bg);
+    border-top: 1px solid var(--border);
+    background: var(--theme);
 }
 
 .footer span {
@@ -26,7 +27,7 @@
 }
 
 .footer a:hover {
-    border-bottom: 2px solid var(--darkcolor);
+    color: var(--accent);
 }
 
 .top-link {
@@ -50,7 +51,7 @@
 
 .footer a:hover,
 .top-link:hover {
-    color: var(--secondary);
+    color: var(--accent);
 }
 
 .top-link:focus,

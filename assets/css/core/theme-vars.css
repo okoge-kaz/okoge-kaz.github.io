@@ -2,44 +2,50 @@
     --gap: 24px;
     --content-gap: 20px;
     --nav-width: 1024px;
-    --main-width: 720px;
-    --header-height: 44px;
+    --main-width: 860px;
+    --header-height: 60px;
     --footer-height: 70px;
     --radius: 8px;
-    --theme: rgb(255, 255, 255);
-    --entry: rgb(255, 255, 255);
-    --primary: rgb(30, 30, 30);
-    --secondary: rgb(108, 108, 108);
-    --tertiary: rgb(214, 214, 214);
-    --gray: rgb(165, 165, 165);
-    --content: rgb(30, 30, 30);
-    --code-block-bg: rgb(28, 29, 33);
-    --code-bg: rgb(245, 245, 245);
-    --border: rgb(238, 238, 238);
-    --darkcolor: #6a7ba2;
-    --lightcolor: #cbd1de;
+    --theme: #ffffff;
+    --entry: #f6f8fa;
+    --primary: rgb(31, 35, 40);
+    --secondary: rgb(101, 109, 118);
+    --tertiary: rgb(208, 215, 222);
+    --gray: rgb(101, 109, 118);
+    --content: rgb(31, 35, 40);
+    --code-block-bg: rgb(22, 27, 34);
+    --code-bg: rgb(246, 248, 250);
+    --border: rgb(208, 215, 222);
+    --accent: #0969da;
+    --accent-glow: rgba(9, 105, 218, 0.15);
+    --darkcolor: #0969da;
+    --lightcolor: rgba(9, 105, 218, 0.1);
     --semibold: 500;
     --homesize: 16px;
     --textsize: 18px;
     --h1size: 25px;
     --entrysize: 15px;
-    --headersize: 16px;
+    --headersize: 15px;
     --footersize: 13px;
-    --lineheight: 1.45;
+    --lineheight: 1.6;
     --lineclamp: 8;
     --marginleft: 26px;
 }
 
 .dark {
-    --theme: rgb(29, 30, 32);
-    --entry: rgb(46, 46, 51);
-    --primary: rgb(218, 218, 219);
-    --secondary: rgb(155, 156, 157);
-    --tertiary: rgb(65, 66, 68);
-    --content: rgb(196, 196, 197);
-    --code-block-bg: rgb(46, 46, 51);
-    --code-bg: rgb(55, 56, 62);
-    --border: rgb(51, 51, 51);
+    --theme: #0d1117;
+    --entry: #161b22;
+    --primary: rgb(230, 237, 243);
+    --secondary: rgb(139, 148, 158);
+    --tertiary: rgb(48, 54, 61);
+    --content: rgb(230, 237, 243);
+    --code-block-bg: #161b22;
+    --code-bg: rgb(22, 27, 34);
+    --border: rgb(48, 54, 61);
+    --accent: #58a6ff;
+    --accent-glow: rgba(88, 166, 255, 0.15);
+    --darkcolor: #58a6ff;
+    --lightcolor: rgba(88, 166, 255, 0.1);
 }
 
 .list {

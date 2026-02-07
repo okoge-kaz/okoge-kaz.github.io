@@ -1,4 +1,4 @@
-baseURL: "https://pascalmichaillat.org/hugo-website/" 
+baseURL: "https://okoge-kaz.github.io/"
 title: Kazuki Fujii
 theme: PaperMod
 
@@ -14,27 +14,33 @@ menu:
     main:
         - name: Publications
           url: publications/
-          weight: 6
+          weight: 2
+        - name: Blog
+          url: blog/
+          weight: 3
+        - name: Projects
+          url: projects/
+          weight: 4
 
 params:
-    description: "This website hosts Kazuki Fujii's research papers, books, course materials, data, curriculum vitae, and contact information."
+    description: "Kazuki Fujii – HPC & ML researcher at the Institute of Science Tokyo. Research on large-scale distributed training, low-precision optimization, and data-centric approaches for LLMs."
     author: Kazuki Fujii
     # googleAnalyticsID: "G-XXXXX"
     DateFormat: "January 2006"
-    defaultTheme: light
+    defaultTheme: dark
     hideFooter: false
-    disableThemeToggle: true
+    disableThemeToggle: false
     ShowShareButtons: false
-    ShowReadingTime: false
+    ShowReadingTime: true
     disableSpecial1stPost: true
-    disableAnchoredHeadings: true
-    ShowPostNavLinks: false
+    disableAnchoredHeadings: false
+    ShowPostNavLinks: true
     ShowBreadCrumbs: false
     ShowCodeCopyButtons: true
     ShowAllPagesInArchive: false
-    MainSections: ["books","courses","papers","data"]
-    ShowToc: false
-    disableScrollToTop: true
+    MainSections: ["blog","books","courses","papers","data"]
+    ShowToc: true
+    disableScrollToTop: false
     TocOpen: true
     ShowWordCount: false
     UseHugoToc: true
@@ -57,6 +63,8 @@ params:
               url: cv.pdf
             - name: Publications
               url: publications/
+            - name: Blog
+              url: blog/
             - name: Blog(Japanese)
               url: https://zenn.dev/kaz20
 
@@ -75,14 +83,17 @@ params:
           url: https://bsky.app/profile/kazukifujii.bsky.social
 
     assets:
+        favicon: "favicon.svg"
+        favicon16x16: "favicon.svg"
+        favicon32x32: "favicon.svg"
+        theme_color: "#0d1117"
         disableScrollBarStyle: true
     cover:
         hiddenInList: false
         hiddenInSingle: true
     label:
       text: "Kazuki Fujii"
-      icon: favicon.ico
-      iconHeight: 18
+      iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="22" height="22"><rect width="64" height="64" rx="12" fill="#0d1117"/><path d="M12 18 L28 32 L12 46" stroke="#58a6ff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><rect x="32" y="40" width="22" height="5" rx="2" fill="#58a6ff"/></svg>'
 
 markup:
     goldmark:
@@ -90,7 +101,7 @@ markup:
             unsafe: true
     highlight:
         guessSyntax: true
-        style: autumn
+        style: monokai
     tableOfContents:
         endLevel: 2
         ordered: false

@@ -39,12 +39,14 @@
     padding: var(--gap);
     background: var(--entry);
     border-radius: var(--radius);
-    transition: transform 0.1s;
-    border: 2px solid var(--border);
+    transition: transform 0.2s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border);
 }
 
 .post-entry:hover {
-     border: 2px solid var(--darkcolor);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px var(--accent-glow);
 }
 
 .tag-entry .entry-cover {

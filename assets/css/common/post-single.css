@@ -50,11 +50,11 @@
 }
 
 .post-content h3 {
-    font-size: 19px;    
+    font-size: 19px;
 }
 
 .post-content h4 {
-    font-size: 15px;    
+    font-size: 15px;
     font-weight: var(--semibold);
     text-transform: uppercase;
     color: var(--gray);
@@ -75,8 +75,13 @@
 .post-content a,
 .post-meta a,
 .toc a:hover {
-    box-shadow: 0 2px 0 var(--darkcolor);
-    color: currentColor; 
+    box-shadow: 0 1px 0 var(--accent);
+    color: var(--accent);
+}
+
+.post-content a:hover,
+.post-meta a:hover {
+    box-shadow: 0 2px 0 var(--accent);
 }
 
 .post-content a code {
@@ -100,7 +105,7 @@
 .post-content ol,
 .post-content ul {
     padding-inline-start: 20px;
-    margin-left: var(--marginleft); 
+    margin-left: var(--marginleft);
 }
 
 .post-content li {
@@ -108,7 +113,7 @@
 }
 
 .post-content li::marker {
-    color: var(--tertiary);
+    color: var(--accent);
 }
 
 .post-content li p {
@@ -206,15 +211,18 @@
     margin: auto 4px;
     padding: 4px 6px;
     font-size: 0.78em;
+    font-family: 'JetBrains Mono', monospace;
     line-height: var(--lineheight);
     background: var(--code-bg);
-    border-radius: 2px;
+    border-radius: 4px;
 }
 
 .post-content pre code {
     display: grid;
     margin: auto 0;
     padding: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
     color: var(--secondary);
     border-radius: var(--radius);
     overflow-x: auto;
@@ -223,9 +231,11 @@
 
 .post-content blockquote {
     margin: 20px 0;
-    padding: 0 20px;
-    color: var(--secondary);    
-    border-inline-start: 6px solid var(--tertiary);
+    padding: 12px 20px;
+    color: var(--secondary);
+    border-inline-start: 4px solid var(--accent);
+    background: var(--accent-glow);
+    border-radius: 0 var(--radius) var(--radius) 0;
 }
 
 .post-content hr {
@@ -268,13 +278,13 @@
 .toc {
     margin: 0 2px 20px 2px;
     border: 1px solid var(--border);
-    background: var(--code-bg);
+    background: var(--entry);
     border-radius: var(--radius);
     padding: 0.4em;
 }
 
 .toc li::marker {
-    color: var(--tertiary);
+    color: var(--accent);
 }
 
 .dark .toc {
@@ -346,10 +356,15 @@
     font-size: 16px;
     line-height: 32px;
     background: var(--code-bg);
+    border: 1px solid var(--border);
+    transition: all 0.25s ease;
 }
 
 .post-tags a:hover {
-    background: var(--lightcolor);
+    background: var(--accent-glow);
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: none;
 }
 
 .paginav a:hover {
@@ -381,11 +396,11 @@ h4:hover .anchor,
 h5:hover .anchor,
 h6:hover .anchor {
     display: inline-flex;
-    color: var(--darkcolor);
+    color: var(--accent);
     margin-inline-start: 10px;
     font-weight: 700;
     user-select: none;
-    box-shadow: 0 0px 0 var(--darkcolor);
+    box-shadow: 0 0px 0 var(--accent);
 }
 
 .paginav {
@@ -433,9 +448,9 @@ img.in-text {
 }
 
 a[href^="#fn:"], a[href^="#fnref:"] {
-     box-shadow: 0 0px 0 var(--darkcolor);
+     box-shadow: 0 0px 0 var(--accent);
 }
 
 a[href^="#fn:"]:hover, a[href^="#fnref:"]:hover {
-    color: var(--darkcolor);
+    color: var(--accent);
 }

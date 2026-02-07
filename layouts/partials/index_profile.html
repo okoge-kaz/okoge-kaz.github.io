@@ -1,0 +1,156 @@
+<div class="profile">
+    {{- with site.Params.profileMode }}
+    <div class="profile_inner">
+        {{- if .imageUrl -}}
+        {{- $img := "" }}
+        {{- if not (urls.Parse .imageUrl).IsAbs }}
+            {{- $img = resources.Get .imageUrl }}
+        {{- end }}
+        {{- if $img }}
+            {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
+            {{- if hugo.IsExtended -}}
+                {{- $processableFormats = $processableFormats | append "webp" -}}
+            {{- end -}}
+            {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
+            {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
+                {{- if (not (and (not .imageHeight) (not .imageWidth))) }}
+                    {{- $img = $img.Resize (printf "%dx%d" .imageWidth .imageHeight) }}
+                {{- else if .imageHeight }}
+                    {{- $img = $img.Resize (printf "x%d" .imageHeight) }}
+                {{ else if .imageWidth }}
+                    {{- $img = $img.Resize (printf "%dx" .imageWidth) }}
+                {{ else }}
+                    {{- $img = $img.Resize "150x150" }}
+                {{- end }}
+            {{- end }}
+            <img draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+                height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+        {{- else }}
+        <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+            height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+        {{- end }}
+        {{- end }}
+
+        <div class="terminal-greeting">
+            <span>&gt; CS PhD Student @ ScienceTokyo:~$</span><span class="cursor"></span>
+        </div>
+
+        <div class="upcoming-schedule">
+            <div class="schedule-label">Upcoming</div>
+            <div class="schedule-items">
+                <div class="schedule-item">
+                    <span class="schedule-date">Mar 2026</span>
+                    <span class="schedule-sep"></span>
+                    <span class="schedule-event">GTC 2026 <span class="schedule-detail">Poster &amp; Talk</span></span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-date">Apr 2026</span>
+                    <span class="schedule-sep"></span>
+                    <span class="schedule-event">ICLR 2026 <span class="schedule-detail">Poster</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="now-working-on">
+            <div class="nwo-label">Now Working On</div>
+            <div class="nwo-items">
+                <a href="{{ "projects/" | absURL }}" class="nwo-item">
+                    <span class="nwo-name">Qwen3-Swallow</span>
+                    <span class="nwo-desc">Continual pre-training + SFT + RLVR on Qwen3 for Japanese</span>
+                </a>
+                <a href="{{ "projects/" | absURL }}" class="nwo-item">
+                    <span class="nwo-name">GPT-OSS-Swallow</span>
+                    <span class="nwo-desc">Enhancing Japanese capabilities of GPT-OSS</span>
+                </a>
+            </div>
+        </div>
+
+        <h1>{{ .title | default site.Title | markdownify }}</h1>
+        <span>{{ .subtitle | markdownify }}</span>
+        {{- partial "social_icons.html" -}}
+
+        {{- with .buttons }}
+        <div class="buttons">
+            {{- range . }}
+            <a class="button" href="{{ trim .url " " }}" rel="noopener" title="{{ .name }}">
+                <span class="button-inner">
+                    {{ .name }}
+                    {{- if (findRE "://" .url) }}&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="14" width="14">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                    {{- end }}
+                </span>
+            </a>
+            {{- end }}
+        </div>
+        {{- end }}
+
+        <div class="research-interests">
+            <div class="ri-label">Research Interests</div>
+            <div class="ri-gantt">
+                <div class="ri-gantt-header">
+                    <span class="ri-gantt-spacer"></span>
+                    <span class="ri-gantt-year">2023</span>
+                    <span class="ri-gantt-year">2024</span>
+                    <span class="ri-gantt-year">2025</span>
+                    <span class="ri-gantt-year">2026</span>
+                </div>
+                <!-- Each bar: start/end as month offsets from 2023/01. Total range: 2023/01 ~ 2026/12 = 48 months -->
+                <!-- LLM Distributed Training: 2023/03 ~ present (ongoing) => offset 2, width to end -->
+                <div class="ri-gantt-row">
+                    <span class="ri-gantt-topic">Distributed Training</span>
+                    <div class="ri-gantt-track">
+                        <div class="ri-gantt-bar active" style="left: 4.17%; right: 0%;"></div>
+                    </div>
+                </div>
+                <!-- Continual Pre-Training: 2023/09 ~ present => offset 8 -->
+                <div class="ri-gantt-row">
+                    <span class="ri-gantt-topic">Continual Pre-Training</span>
+                    <div class="ri-gantt-track">
+                        <div class="ri-gantt-bar active" style="left: 16.67%; right: 0%;"></div>
+                    </div>
+                </div>
+                <!-- Low Precision Pre-Training: 2024/06 ~ present => offset 17 -->
+                <div class="ri-gantt-row">
+                    <span class="ri-gantt-topic">Low Precision Training</span>
+                    <div class="ri-gantt-track">
+                        <div class="ri-gantt-bar active" style="left: 35.42%; right: 0%;"></div>
+                    </div>
+                </div>
+                <!-- Pre-Training Dataset Improvement: 2024/10 ~ 2025/11 => offset 21, end 34 => width 13/48 -->
+                <div class="ri-gantt-row">
+                    <span class="ri-gantt-topic">Data Improvement</span>
+                    <div class="ri-gantt-track">
+                        <div class="ri-gantt-bar ended" style="left: 43.75%; right: 27.08%;"></div>
+                    </div>
+                </div>
+                <!-- Diffusion LM: 2025/10 ~ present => offset 33 -->
+                <div class="ri-gantt-row">
+                    <span class="ri-gantt-topic">Diffusion LM</span>
+                    <div class="ri-gantt-track">
+                        <div class="ri-gantt-bar active" style="left: 68.75%; right: 0%;"></div>
+                    </div>
+                </div>
+                <!-- RLVR: 2025/12 ~ present => offset 35 -->
+                <div class="ri-gantt-row">
+                    <span class="ri-gantt-topic">RLVR</span>
+                    <div class="ri-gantt-track">
+                        <div class="ri-gantt-bar active" style="left: 72.92%; right: 0%;"></div>
+                    </div>
+                </div>
+                <!-- VLA: 2026/01 ~ present => offset 36 -->
+                <div class="ri-gantt-row">
+                    <span class="ri-gantt-topic">VLA</span>
+                    <div class="ri-gantt-track">
+                        <div class="ri-gantt-bar active" style="left: 75.00%; right: 0%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{- end}}
+</div>
