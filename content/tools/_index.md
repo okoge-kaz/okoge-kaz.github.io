@@ -19,4 +19,9 @@ Practical client-side tools for planning LLM training and inference. All calcula
 <div class="tool-card-desc">Estimate per-GPU memory during LLM training with 5D parallelism (TP/PP/DP/CP/EP). Supports MoE, distributed optimizer, and NCCL buffer estimation.</div>
 </a>
 
+<a class="tool-card" href="/tools/gpu-process-visualizer/">
+<div class="tool-card-title">GPU Process Mapping Visualizer</div>
+<div class="tool-card-desc">Visualize how TP/EP/CP/DP/PP communicator groups map to physical GPU nodes. Interactive 3D view with color-coded process groups.</div>
+</a>
+
 </div>

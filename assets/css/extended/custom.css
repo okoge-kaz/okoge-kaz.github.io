@@ -1250,3 +1250,214 @@ button#theme-toggle:hover {
         font-size: 10px;
     }
 }
+
+/* ===== GPU Process Visualizer ===== */
+
+.gpu-viz-controls {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.gpu-viz-comm-btn {
+    padding: 6px 16px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--entry);
+    color: var(--secondary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gpu-viz-comm-btn:hover {
+    border-color: var(--accent);
+    color: var(--primary);
+}
+
+.gpu-viz-comm-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.gpu-viz-comm-btn[data-comm="tp"].active  { background: hsl(271, 70%, 50%); border-color: hsl(271, 70%, 50%); }
+.gpu-viz-comm-btn[data-comm="ep"].active  { background: hsl(30, 70%, 50%);  border-color: hsl(30, 70%, 50%);  }
+.gpu-viz-comm-btn[data-comm="cp"].active  { background: hsl(140, 70%, 40%); border-color: hsl(140, 70%, 40%); }
+.gpu-viz-comm-btn[data-comm="dp"].active  { background: hsl(211, 70%, 50%); border-color: hsl(211, 70%, 50%); }
+.gpu-viz-comm-btn[data-comm="pp"].active  { background: hsl(0, 70%, 50%);   border-color: hsl(0, 70%, 50%);   }
+.gpu-viz-comm-btn[data-comm="none"].active { background: var(--secondary); border-color: var(--secondary); }
+
+.gpu-viz-legend {
+    margin-bottom: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+}
+
+.gpu-viz-legend-title {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.gpu-viz-legend-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.gpu-viz-legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 11px;
+}
+
+.gpu-viz-legend-item:hover {
+    border-color: var(--accent);
+    color: var(--primary);
+}
+
+.gpu-viz-legend-swatch {
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.gpu-viz-container {
+    position: relative;
+    min-height: 200px;
+    perspective: 1200px;
+    margin-bottom: 24px;
+    cursor: grab;
+    overflow: visible;
+}
+
+.gpu-viz-scene {
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+}
+
+.gpu-node {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px;
+    background: var(--entry);
+    transform: translateZ(2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+    flex-shrink: 0;
+}
+
+.gpu-node:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.gpu-node-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--secondary);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.gpu-node-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(44px, 1fr));
+    gap: 6px;
+    min-width: 200px;
+}
+
+.gpu-cell {
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    background: var(--entry);
+    border: 1.5px solid var(--border);
+    color: var(--primary);
+    cursor: pointer;
+    transition: transform 0.15s ease, opacity 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    position: relative;
+}
+
+.gpu-cell:hover {
+    transform: scale(1.15);
+    z-index: 10;
+}
+
+.gpu-cell.highlight {
+    box-shadow: 0 0 10px currentColor;
+}
+
+.gpu-cell.dim {
+    opacity: 0.2;
+}
+
+.gpu-viz-tooltip {
+    display: none;
+    position: absolute;
+    background: var(--entry);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 8px 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    line-height: 1.6;
+    color: var(--primary);
+    pointer-events: none;
+    z-index: 100;
+    transform: translate(-50%, -100%);
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .gpu-viz-scene {
+        flex-direction: column;
+    }
+
+    .gpu-node-grid {
+        min-width: 150px;
+    }
+
+    .gpu-cell {
+        width: 36px;
+        height: 36px;
+        font-size: 10px;
+    }
+
+    .gpu-viz-controls {
+        gap: 6px;
+    }
+
+    .gpu-viz-comm-btn {
+        padding: 5px 12px;
+        font-size: 11px;
+    }
+}
