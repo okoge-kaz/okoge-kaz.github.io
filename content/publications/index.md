@@ -1,8 +1,8 @@
 # Publications
 
-<!-- citation-update: 2026-02-07 -->
+<!-- citation-update: 2026-03-30 -->
 <a href="https://scholar.google.co.jp/citations?user=jHXLs2wAAAAJ&hl=en"><img src="https://img.shields.io/badge/Google_Scholar-Kazuki_Fujii-4285F4?logo=google-scholar&style=flat-square" alt="Google Scholar"></a>
-<span><img src="https://img.shields.io/badge/Total_Citations-208-4285F4?style=flat-square&logo=google-scholar" alt="Total Citations"></span>
+<span><img src="https://img.shields.io/badge/Total_Citations-241-4285F4?style=flat-square&logo=google-scholar" alt="Total Citations"></span>
 
 ## Peer-Reviewed Conference Papers
 
@@ -15,7 +15,7 @@
   <a href="https://arxiv.org/abs/2505.02881"><img src="https://img.shields.io/badge/arXiv-2505.02881-b31b1b.svg?style=flat-square" alt="arXiv"></a>
   <a href="https://huggingface.co/datasets/tokyotech-llm/swallow-math"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HF-Math_Dataset-ffd21e?style=flat-square" alt="HF Math"></a>
   <a href="https://huggingface.co/datasets/tokyotech-llm/swallow-code"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HF-Code_Dataset-ffd21e?style=flat-square" alt="HF Code"></a>
-  <span><img src="https://img.shields.io/badge/Cited_by-10-4285F4?style=flat-square&logo=google-scholar" alt="Citations: 10"></span>
+  <span><img src="https://img.shields.io/badge/Cited_by-12-4285F4?style=flat-square&logo=google-scholar" alt="Citations: 12"></span>
 </div>
 
 * **Authors:** **Kazuki Fujii**, Yukito Tajima, Sakae Mizuki, Masaki Kawamura, Hinari Shimada, Taihei Shiotani, Koshiro Saito, Masanari Oi, Taishi Nakamura, Takumi Okamoto, Shigeki Ishida, Kakeru Hattori, Youmi Ma, Hiroya Takamura, Rio Yokota, Jun Sakuma, Naoaki Okazaki
@@ -33,7 +33,7 @@
   <span><img src="https://img.shields.io/badge/Role-Co--Author-777777?style=flat-square" alt="Co-Author"></span>
   <a href="https://arxiv.org/abs/2503.23714"><img src="https://img.shields.io/badge/arXiv-2503.23714-b31b1b.svg?style=flat-square" alt="arXiv"></a>
   <a href="https://colmweb.org/"><img src="https://img.shields.io/badge/COLM_2025-Main_Conference-4b44ce?style=flat-square" alt="COLM 2025"></a>
-  <span><img src="https://img.shields.io/badge/Cited_by-4-4285F4?style=flat-square&logo=google-scholar" alt="Citations: 4"></span>
+  <span><img src="https://img.shields.io/badge/Cited_by-5-4285F4?style=flat-square&logo=google-scholar" alt="Citations: 5"></span>
 </div>
 
 * **Authors:** Youmi Ma, Sakae Mizuki, **Kazuki Fujii**, Taishi Nakamura, Masanari Ohi, Hinari Shimada, Taihei Shiotani, Koshiro Saito, Koki Maeda, Kakeru Hattori, Takumi Okamoto, Shigeki Ishida, Rio Yokota, Hiroya Takamura, Naoaki Okazaki
@@ -48,7 +48,7 @@
   <span><img src="https://img.shields.io/badge/Role-Co--Author-777777?style=flat-square" alt="Co-Author"></span>
   <a href="https://arxiv.org/abs/2502.19261"><img src="https://img.shields.io/badge/arXiv-2502.19261-b31b1b.svg?style=flat-square" alt="arXiv"></a>
   <a href="https://iclr.cc/"><img src="https://img.shields.io/badge/ICLR_2025-Main_Conference-ede1d1?style=flat-square" alt="ICLR 2025"></a>
-  <span><img src="https://img.shields.io/badge/Cited_by-6-4285F4?style=flat-square&logo=google-scholar" alt="Citations: 6"></span>
+  <span><img src="https://img.shields.io/badge/Cited_by-11-4285F4?style=flat-square&logo=google-scholar" alt="Citations: 11"></span>
 </div>
 
 * **Authors:** Taishi Nakamura, Takuya Akiba, **Kazuki Fujii**, Yusuke Oda, Rio Yokota, Jun Suzuki
@@ -65,7 +65,7 @@
   <a href="https://colmweb.org/"><img src="https://img.shields.io/badge/COLM_2024-Main_Conference-4b44ce?style=flat-square" alt="COLM 2024"></a>
   <a href="https://huggingface.co/collections/tokyotech-llm/swallow"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-ffd21e?style=flat-square" alt="Hugging Face"></a>
   <a href="https://github.com/rioyokotalab/Megatron-Llama2"><img src="https://img.shields.io/badge/Code-GitHub-181717?logo=github&style=flat-square" alt="Code"></a>
-  <span><img src="https://img.shields.io/badge/Cited_by-123-4285F4?style=flat-square&logo=google-scholar" alt="Citations: 123"></span>
+  <span><img src="https://img.shields.io/badge/Cited_by-137-4285F4?style=flat-square&logo=google-scholar" alt="Citations: 137"></span>
 </div>
 
 * **Authors:** **Kazuki Fujii**, Taishi Nakamura, Mengsay Loem, Hiroki Iida, Masanari Ohi, Kakeru Hattori, Hirai Shota, Sakae Mizuki, Rio Yokota, Naoaki Okazaki
@@ -80,7 +80,7 @@
   <span><img src="https://img.shields.io/badge/Role-Co--Author-777777?style=flat-square" alt="Co-Author"></span>
   <a href="https://arxiv.org/abs/2404.17733"><img src="https://img.shields.io/badge/arXiv-2404.17733-b31b1b.svg?style=flat-square" alt="arXiv"></a>
   <a href="https://colmweb.org/"><img src="https://img.shields.io/badge/COLM_2024-Main_Conference-4b44ce?style=flat-square" alt="COLM 2024"></a>
-  <span><img src="https://img.shields.io/badge/Cited_by-25-4285F4?style=flat-square&logo=google-scholar" alt="Citations: 25"></span>
+  <span><img src="https://img.shields.io/badge/Cited_by-30-4285F4?style=flat-square&logo=google-scholar" alt="Citations: 30"></span>
 </div>
 
 * **Authors:** Naoaki Okazaki, Kakeru Hattori, Hirai Shota, Hiroki Iida, Masanari Ohi, **Kazuki Fujii**, Taishi Nakamura, Mengsay Loem, Rio Yokota, Sakae Mizuki
@@ -99,7 +99,7 @@
   <a href="https://arxiv.org/abs/2412.14471"><img src="https://img.shields.io/badge/arXiv-2412.14471-b31b1b.svg?style=flat-square" alt="arXiv"></a>
   <a href="https://colmweb.org/"><img src="https://img.shields.io/badge/COLM_2025-MELT_Workshop-4b44ce?style=flat-square" alt="COLM 2025"></a>
   <span><img src="https://img.shields.io/badge/Award-Outstanding_Paper-FFD700?style=flat-square" alt="Award"></span>
-  <span><img src="https://img.shields.io/badge/Cited_by-1-4285F4?style=flat-square&logo=google-scholar" alt="Citations: 1"></span>
+  <span><img src="https://img.shields.io/badge/Cited_by-2-4285F4?style=flat-square&logo=google-scholar" alt="Citations: 2"></span>
 </div>
 
 * **Venue:** Conference on Language Modeling (COLM) Multilingual and Equitable Language Technologies Workshop 2025
@@ -130,7 +130,7 @@
   <span><img src="https://img.shields.io/badge/Role-Co--Author-777777?style=flat-square" alt="Co-Author"></span>
   <a href="https://arxiv.org/abs/2404.07824"><img src="https://img.shields.io/badge/arXiv-2404.07824-b31b1b.svg?style=flat-square" alt="arXiv"></a>
   <a href="https://cvpr.thecvf.com/"><img src="https://img.shields.io/badge/CVPR_2024-Wild_Vision_Workshop-1c5c9a?style=flat-square" alt="CVPR"></a>
-  <span><img src="https://img.shields.io/badge/Cited_by-15-4285F4?style=flat-square&logo=google-scholar" alt="Citations: 15"></span>
+  <span><img src="https://img.shields.io/badge/Cited_by-17-4285F4?style=flat-square&logo=google-scholar" alt="Citations: 17"></span>
 </div>
 
 * **Authors:** Yuichi Inoue, Kento Sasaki, Yuma Ochi, **Kazuki Fujii**, Kotaro Tanahashi, Yu Yamaguchi
@@ -148,7 +148,7 @@
 <div class="pub-badges">
   <span><img src="https://img.shields.io/badge/Role-First_Author-007ec6?style=flat-square" alt="First Author"></span>
   <a href="https://arxiv.org/abs/2411.08719"><img src="https://img.shields.io/badge/arXiv-2411.08719-b31b1b.svg?style=flat-square" alt="arXiv"></a>
-  <span><img src="https://img.shields.io/badge/Cited_by-3-4285F4?style=flat-square&logo=google-scholar" alt="Citations: 3"></span>
+  <span><img src="https://img.shields.io/badge/Cited_by-2-4285F4?style=flat-square&logo=google-scholar" alt="Citations: 2"></span>
 </div>
 
 * **Contribution:** Spearheaded the verification of FP8 training for the **Swallow Project** (Japanese & English Bilingual LLM).
@@ -163,7 +163,7 @@
   <span><img src="https://img.shields.io/badge/Role-Co--Author-777777?style=flat-square" alt="Co-Author"></span>
   <a href="https://arxiv.org/abs/2407.03963"><img src="https://img.shields.io/badge/arXiv-2407.03963-b31b1b.svg?style=flat-square" alt="arXiv"></a>
   <a href="https://huggingface.co/llm-jp"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-ffd21e?style=flat-square" alt="Hugging Face"></a>
-  <span><img src="https://img.shields.io/badge/Cited_by-18-4285F4?style=flat-square&logo=google-scholar" alt="Citations: 18"></span>
+  <span><img src="https://img.shields.io/badge/Cited_by-20-4285F4?style=flat-square&logo=google-scholar" alt="Citations: 20"></span>
 </div>
 
 * **Role:** Served as the **Lead for Pre-training, Library Development, and Distributed Training** (May 2023 - Aug 2024).
@@ -178,7 +178,7 @@
 <div class="pub-badges">
   <span><img src="https://img.shields.io/badge/Role-First_Author-007ec6?style=flat-square" alt="First Author"></span>
   <a href="https://arxiv.org/abs/2411.06465"><img src="https://img.shields.io/badge/arXiv-2411.06465-b31b1b.svg?style=flat-square" alt="arXiv"></a>
-  <span><img src="https://img.shields.io/badge/Cited_by-3-4285F4?style=flat-square&logo=google-scholar" alt="Citations: 3"></span>
+  <span><img src="https://img.shields.io/badge/Cited_by-5-4285F4?style=flat-square&logo=google-scholar" alt="Citations: 5"></span>
 </div>
 
 * **Authors:** **Kazuki Fujii**, Kohei Watanabe, Rio Yokota
@@ -289,7 +289,34 @@
 
 ## Talks
 
+<div class="year-divider">2026</div>
+
+<div class="pub-entry">
+
+### **Swallow LLM: Continual Pre-Training and RL for Sovereign AI**
+<div class="pub-badges">
+  <span><img src="https://img.shields.io/badge/Date-2026%2F03-777777?style=flat-square" alt="Date"></span>
+  <span><img src="https://img.shields.io/badge/Language-English-005696?style=flat-square" alt="English"></span>
+  <a href="https://www.nvidia.com/en-us/on-demand/session/gtc26-s81710/"><img src="https://img.shields.io/badge/Event-GTC_2026-76b900?logo=nvidia&style=flat-square" alt="Event"></a>
+</div>
+
+* **Event:** NVIDIA GTC 2026 (Poster & Talk)
+
+</div>
+
 <div class="year-divider">2025</div>
+
+<div class="pub-entry">
+
+### **DDN User Group Meeting Japan 2025**
+<div class="pub-badges">
+  <span><img src="https://img.shields.io/badge/Date-2025%2F12-777777?style=flat-square" alt="Date"></span>
+  <span><img src="https://img.shields.io/badge/Language-Japanese-d7003a?style=flat-square" alt="Japanese"></span>
+</div>
+
+* **Event:** DDN User Group Meeting Japan 2025
+
+</div>
 
 <div class="pub-entry">
 
