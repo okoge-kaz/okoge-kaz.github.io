@@ -209,24 +209,6 @@ body,
     font-weight: 600;
 }
 
-.ri-topics {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    list-style: none;
-    margin: 0 0 14px;
-    padding: 0;
-}
-
-.ri-topics li {
-    padding: 4px 8px;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    color: var(--primary);
-    font-size: 11px;
-    text-align: left;
-}
-
 .ri-gantt {
     display: flex;
     flex-direction: column;
@@ -269,10 +251,9 @@ body,
     font-size: 11px;
     color: var(--primary);
     font-weight: 500;
-    padding-right: 12px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    padding: 4px 12px 4px 0;
+    white-space: normal;
+    line-height: 1.4;
     transition: color 0.2s ease;
 }
 
